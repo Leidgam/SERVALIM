@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0FFCBC1-26A3-4B25-A70D-6FC0BA01EB5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comedor.Vista</RootNamespace>
+    <AssemblyName>Comedor.Vista</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico_sec_comer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceso\Logueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceso\Logueo.Designer.cs">
+      <DependentUpon>Logueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Confirmacion\Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Confirmacion\Confirm.Designer.cs">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\Consumidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\Consumidores.Designer.cs">
+      <DependentUpon>Consumidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\AsigTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\AsigTurnos.Designer.cs">
+      <DependentUpon>AsigTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\Grupos.Designer.cs">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\NuevoGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Grupos\NuevoGrupo.Designer.cs">
+      <DependentUpon>NuevoGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\SelectGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\SelectGrupo.Designer.cs">
+      <DependentUpon>SelectGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Turnos\NuevoTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Turnos\NuevoTurno.Designer.cs">
+      <DependentUpon>NuevoTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Turnos\Turnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Turnos\Turnos.Designer.cs">
+      <DependentUpon>Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Confirmacion\Rechazar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Confirmacion\Rechazar.Designer.cs">
+      <DependentUpon>Rechazar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\foto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\foto.Designer.cs">
+      <DependentUpon>foto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Incidencias\Incidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Incidencias\Incidencias.Designer.cs">
+      <DependentUpon>Incidencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Incidencias\Nueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Incidencias\Nueva.Designer.cs">
+      <DependentUpon>Nueva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Matricular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Matricular.Designer.cs">
+      <DependentUpon>Matricular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Registro\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Registro\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Registro\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Registro\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Reserva.Designer.cs">
+      <DependentUpon>Reserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Reser\Elegir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Reser\Elegir.Designer.cs">
+      <DependentUpon>Elegir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Reser\Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Reser\Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Reser\opcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Reser\opcion.Designer.cs">
+      <DependentUpon>opcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\SelectPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\SelectPeriodo.Designer.cs">
+      <DependentUpon>SelectPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\Save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\Save.Designer.cs">
+      <DependentUpon>Save.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSet2.Designer.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\DataSet3.Designer.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\frmConsumidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmConsumidor.Designer.cs">
+      <DependentUpon>frmConsumidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmConsumoPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmConsumoPersona.Designer.cs">
+      <DependentUpon>frmConsumoPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmIncidencia.Designer.cs">
+      <DependentUpon>frmIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmIncidenciaNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmIncidenciaNuevo.Designer.cs">
+      <DependentUpon>frmIncidenciaNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmRegistroTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmRegistroTurno.Designer.cs">
+      <DependentUpon>frmRegistroTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PrintRegTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\PrintRegTurno.Designer.cs">
+      <DependentUpon>PrintRegTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PrintReportConsumidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\PrintReportConsumidor.Designer.cs">
+      <DependentUpon>PrintReportConsumidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PrintReportConsumidorPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\PrintReportConsumidorPersona.Designer.cs">
+      <DependentUpon>PrintReportConsumidorPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Reserv\DataSet5.Designer.cs">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\Reserv\Print_Reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reserv\Print_Reservas.Designer.cs">
+      <DependentUpon>Print_Reservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Reserv\Reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reserv\Reservas.Designer.cs">
+      <DependentUpon>Reservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Asignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Asignacion.Designer.cs">
+      <DependentUpon>Asignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Mantenimiento.Designer.cs">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\NuevoRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\NuevoRol.Designer.cs">
+      <DependentUpon>NuevoRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Roles.Designer.cs">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Acceso\Logueo.resx">
+      <DependentUpon>Logueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Confirmacion\Confirm.resx">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Grupos\AsigTurnos.resx">
+      <DependentUpon>AsigTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Grupos\Consumidores.resx">
+      <DependentUpon>Consumidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Grupos\Grupos.resx">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Grupos\NuevoGrupo.resx">
+      <DependentUpon>NuevoGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\SelectGrupo.resx">
+      <DependentUpon>SelectGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Turnos\NuevoTurno.resx">
+      <DependentUpon>NuevoTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Turnos\Turnos.resx">
+      <DependentUpon>Turnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Confirmacion\Rechazar.resx">
+      <DependentUpon>Rechazar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\foto.resx">
+      <DependentUpon>foto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Incidencias\Incidencias.resx">
+      <DependentUpon>Incidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Incidencias\Nueva.resx">
+      <DependentUpon>Nueva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Matricular.resx">
+      <DependentUpon>Matricular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Registro\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Registro\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Reserva.resx">
+      <DependentUpon>Reserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Reser\Elegir.resx">
+      <DependentUpon>Elegir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Reser\Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Reser\opcion.resx">
+      <DependentUpon>opcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\SelectPeriodo.resx">
+      <DependentUpon>SelectPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Recursos\Save.resx">
+      <DependentUpon>Save.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmConsumidor.resx">
+      <DependentUpon>frmConsumidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmConsumoPersona.resx">
+      <DependentUpon>frmConsumoPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmIncidencia.resx">
+      <DependentUpon>frmIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmIncidenciaNuevo.resx">
+      <DependentUpon>frmIncidenciaNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmRegistroTurno.resx">
+      <DependentUpon>frmRegistroTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\PrintRegTurno.resx">
+      <DependentUpon>PrintRegTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\PrintReportConsumidor.resx">
+      <DependentUpon>PrintReportConsumidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\PrintReportConsumidorPersona.resx">
+      <DependentUpon>PrintReportConsumidorPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\Reserv\Print_Reservas.resx">
+      <DependentUpon>Print_Reservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reserv\Reservas.resx">
+      <DependentUpon>Reservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reserv\rptReserva.rdlc" />
+    <EmbeddedResource Include="Usuarios\Asignacion.resx">
+      <DependentUpon>Asignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Mantenimiento.resx">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\NuevoRol.resx">
+      <DependentUpon>NuevoRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Roles.resx">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comedor.Control\Comedor.Control.csproj">
+      <Project>{a0cc8803-8cc8-4fd3-8e77-c7e901f81b51}</Project>
+      <Name>Comedor.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comedor.Modelo\Comedor.Modelo.csproj">
+      <Project>{e7ff9a46-7004-463c-893e-da0262e4c625}</Project>
+      <Name>Comedor.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reportes\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Reserv\DataSet5.xsc">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Reserv\DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\Reserv\DataSet5.xss">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\business_user_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_folder_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_female_users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ico_sec_comer.ico" />
+    <None Include="Resources\next1.png" />
+    <None Include="Resources\red_button.png" />
+    <None Include="Resources\orange_button.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\green_button.png" />
+    <None Include="Resources\delete2.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\search_page.png" />
+    <None Include="Resources\search_male_user.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\search_image.png" />
+    <None Include="Resources\rPresencial32x32.png" />
+    <None Include="Resources\bolsa32x32.png" />
+    <None Include="Resources\normal32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

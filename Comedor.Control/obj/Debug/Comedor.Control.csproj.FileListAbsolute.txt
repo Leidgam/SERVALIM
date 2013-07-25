@@ -1,0 +1,55 @@
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe.config
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csprojResolveAssemblyReference.cache
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResource.Cache
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\obj\Debug\Comedor.Control.exe
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.Control\obj\Debug\Comedor.Control.pdb
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.exe
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+E:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe.config
+E:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe
+E:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
+E:\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.exe
+E:\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+E:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csprojResolveAssemblyReference.cache
+E:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
+E:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
+E:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResource.Cache
+E:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.exe
+E:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.pdb
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe.config
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.exe
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csprojResolveAssemblyReference.cache
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResource.Cache
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.exe
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.pdb
+E:\05-07-2013\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe.config
+E:\05-07-2013\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe
+E:\05-07-2013\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
+E:\05-07-2013\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.exe
+E:\05-07-2013\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+E:\05-07-2013\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csprojResolveAssemblyReference.cache
+E:\05-07-2013\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
+E:\05-07-2013\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
+E:\05-07-2013\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResource.Cache
+E:\05-07-2013\Comedor\Comedor.Control\obj\Debug\Comedor.Control.exe
+E:\05-07-2013\Comedor\Comedor.Control\obj\Debug\Comedor.Control.pdb
+C:\temp\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe.config
+C:\temp\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe
+C:\temp\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.exe
+C:\temp\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csprojResolveAssemblyReference.cache
+C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
+C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
+C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResource.Cache
+C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.pdb
+C:\temp\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
+C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.exe

@@ -1,0 +1,11 @@
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe.config
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.exe
+C:\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control1.csprojResolveAssemblyReference.cache
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control1.csproj.GenerateResource.Cache
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.exe
+C:\Comedor\Comedor.Control\obj\Debug\Comedor.Control.pdb

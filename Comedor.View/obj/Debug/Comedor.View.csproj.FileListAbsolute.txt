@@ -1,0 +1,51 @@
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.View.exe.config
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.View.exe
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.View.pdb
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Nuevo.resources
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.principal.resources
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Properties.Resources.resources
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.csproj.GenerateResource.Cache
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.exe
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.pdb
+c:\users\magdiel\documents\visual studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.csprojResolveAssemblyReference.cache
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.Modelo.exe
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.Modelo.pdb
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.Control.exe
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.Control.pdb
+D:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\bin\Debug\Comedor.View.exe.config
+D:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.exe
+D:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.pdb
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.foto.resources
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Reservas.Horario.resources
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Reservas.Config.resources
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.txtBuscar.resources
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Control.Gestion.resources
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Incidencia.resources
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Reservas.Excepciones.resources
+C:\Users\Magdiel\Documents\Visual Studio 2012\Projects\Comedor\Comedor.View\obj\Debug\Comedor.View.Acceso.logeo.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.csprojResolveAssemblyReference.cache
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Acceso.logeo.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.txtBuscar.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Control.Gestion.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.foto.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Incidencia.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Nuevo.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.principal.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Properties.Resources.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Reservas.Config.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Reservas.Excepciones.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.Reservas.Horario.resources
+E:\Comedor\Comedor.View\obj\Debug\Comedor.View.csproj.GenerateResource.Cache
+C:\Comedor\Comedor.View\obj\Debug\Comedor.View.csprojResolveAssemblyReference.cache
+C:\Comedor\Comedor.View\obj\Debug\Comedor.View.Acceso.logeo.resources
+C:\Comedor\Comedor.View\obj\Debug\Comedor.View.Properties.Resources.resources
+C:\Comedor\Comedor.View\obj\Debug\Comedor.View.csproj.GenerateResource.Cache
+C:\Comedor\Comedor.View\bin\Debug\Comedor.View.exe.config
+C:\Comedor\Comedor.View\bin\Debug\Comedor.View.exe
+C:\Comedor\Comedor.View\bin\Debug\Comedor.View.pdb
+C:\Comedor\Comedor.View\bin\Debug\Comedor.Control.exe
+C:\Comedor\Comedor.View\bin\Debug\Comedor.Modelo.exe
+C:\Comedor\Comedor.View\bin\Debug\Comedor.Control.pdb
+C:\Comedor\Comedor.View\bin\Debug\Comedor.Modelo.pdb
+C:\Comedor\Comedor.View\obj\Debug\Comedor.View.exe
+C:\Comedor\Comedor.View\obj\Debug\Comedor.View.pdb
