@@ -53,3 +53,14 @@ C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResourc
 C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.pdb
 C:\temp\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
 C:\temp\Comedor\Comedor.Control\obj\Debug\Comedor.Control.exe
+C:\Comedor\SERVALIM\Comedor.Control\bin\Debug\Comedor.Control.exe.config
+C:\Comedor\SERVALIM\Comedor.Control\bin\Debug\Comedor.Control.exe
+C:\Comedor\SERVALIM\Comedor.Control\bin\Debug\Comedor.Control.pdb
+C:\Comedor\SERVALIM\Comedor.Control\bin\Debug\Comedor.Modelo.exe
+C:\Comedor\SERVALIM\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+C:\Comedor\SERVALIM\Comedor.Control\obj\Debug\Comedor.Control.csprojResolveAssemblyReference.cache
+C:\Comedor\SERVALIM\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
+C:\Comedor\SERVALIM\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
+C:\Comedor\SERVALIM\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResource.Cache
+C:\Comedor\SERVALIM\Comedor.Control\obj\Debug\Comedor.Control.exe
+C:\Comedor\SERVALIM\Comedor.Control\obj\Debug\Comedor.Control.pdb

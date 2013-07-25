@@ -16,14 +16,14 @@ namespace Comedor.Control
            
            try
            {
-               string cad = "Data Source=JMGDIEL\\MYSERVER;Initial Catalog=SERV-ALIM;Persist Security Info=True;User ID=sa; Password=sa";
+               string cad = "Data Source=UPG_INGENIERIA\\UPGINGENIERIA;Initial Catalog=SERV-ALIM;Persist Security Info=True;User ID=sa; Password=guille123456";
                conex = new SqlConnection(cad);
 
                conex.Open();
            }
            catch (Exception e)
            {
-               MessageBox.Show("Erro al intentar conectar con Base de Datos");
+               MessageBox.Show("Error al intentar conectar con Base de Datos");
                Application.Exit();
            }
           
