@@ -186,3 +186,6 @@ C:\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.Reportes.Reservas.resources
 C:\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.Consumidores.Confirmacion.Rechazar.resources
 C:\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.frmIncidencia.resources
 C:\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.frmIncidenciaNuevo.resources
+E:\MY\Proyectos\Comedor\Comedor.Vista\bin\Debug\Comedor.Vista.exe.config
+E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.exe
+E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.pdb

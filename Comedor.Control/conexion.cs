@@ -24,6 +24,7 @@ namespace Comedor.Control
            catch (Exception e)
            {
                MessageBox.Show("Erro al intentar conectar con Base de Datos");
+               MessageBox.Show("Salir");
                Application.Exit();
            }
           
