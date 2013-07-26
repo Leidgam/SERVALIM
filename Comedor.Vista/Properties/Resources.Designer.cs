@@ -143,6 +143,26 @@ namespace Comedor.Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fond {
+            get {
+                object obj = ResourceManager.GetObject("fond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap found {
+            get {
+                object obj = ResourceManager.GetObject("found", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_button {
             get {
                 object obj = ResourceManager.GetObject("green_button", resourceCulture);
@@ -276,6 +296,16 @@ namespace Comedor.Vista.Properties {
         internal static System.Drawing.Bitmap search_page {
             get {
                 object obj = ResourceManager.GetObject("search_page", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_back {
+            get {
+                object obj = ResourceManager.GetObject("white-back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
