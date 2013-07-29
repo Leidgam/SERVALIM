@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexion.cs" />
+    <Compile Include="Encryp.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acceso\Conexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceso\Conexion.Designer.cs">
+      <DependentUpon>Conexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acceso\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceso\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Acceso\Logueo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +316,12 @@
     <Compile Include="Usuarios\Roles.Designer.cs">
       <DependentUpon>Roles.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Acceso\Conexion.resx">
+      <DependentUpon>Conexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acceso\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Acceso\Logueo.resx">
       <DependentUpon>Logueo.cs</DependentUpon>
     </EmbeddedResource>

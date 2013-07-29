@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace Comedor.Vista
 {
@@ -16,8 +17,8 @@ namespace Comedor.Vista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
-            Application.Run(new Acceso.Logueo());
+            
+            Application.Run(new Acceso.Loading());
           //  Application.Run(new frmConsumidor());
           //  Application.Run(new frmRegistroTurno());
           //  Application.Run(new frmConsumoPersona());
