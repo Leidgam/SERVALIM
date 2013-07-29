@@ -83,6 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(390, 481);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 21);
@@ -92,6 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(245, 481);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 21);
@@ -100,6 +102,8 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Comedor.Vista.Properties.Resources.rPresencial32x32;
             this.pictureBox3.Location = new System.Drawing.Point(302, 443);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
@@ -108,6 +112,8 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Comedor.Vista.Properties.Resources.bolsa32x32;
             this.pictureBox2.Location = new System.Drawing.Point(431, 443);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 35);
@@ -117,6 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(131, 481);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 21);
@@ -125,6 +132,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Comedor.Vista.Properties.Resources.normal32x32;
             this.pictureBox1.Location = new System.Drawing.Point(171, 443);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
@@ -310,6 +319,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Location = new System.Drawing.Point(12, 12);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(52, 21);
@@ -320,6 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(622, 521);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.tabControl1);
