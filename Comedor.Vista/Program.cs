@@ -17,8 +17,9 @@ namespace Comedor.Vista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            Application.Run(new Acceso.Loading());
+            Acceso.Loading form = new Acceso.Loading();
+            form.iniciar = true;
+            Application.Run(form);
           //  Application.Run(new frmConsumidor());
           //  Application.Run(new frmRegistroTurno());
           //  Application.Run(new frmConsumoPersona());

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.subSalir = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,41 +100,41 @@
             // subRegistro
             // 
             this.subRegistro.Name = "subRegistro";
-            this.subRegistro.Size = new System.Drawing.Size(191, 26);
+            this.subRegistro.Size = new System.Drawing.Size(254, 26);
             this.subRegistro.Text = "Registro";
             this.subRegistro.Click += new System.EventHandler(this.subRegistro_Click);
             // 
             // subIncidencia
             // 
             this.subIncidencia.Name = "subIncidencia";
-            this.subIncidencia.Size = new System.Drawing.Size(191, 26);
+            this.subIncidencia.Size = new System.Drawing.Size(254, 26);
             this.subIncidencia.Text = "Incidencias";
             // 
             // subControl
             // 
             this.subControl.Name = "subControl";
-            this.subControl.Size = new System.Drawing.Size(191, 26);
+            this.subControl.Size = new System.Drawing.Size(254, 26);
             this.subControl.Text = "Control";
             // 
             // subMatricular
             // 
             this.subMatricular.Name = "subMatricular";
-            this.subMatricular.Size = new System.Drawing.Size(191, 26);
+            this.subMatricular.Size = new System.Drawing.Size(254, 26);
             this.subMatricular.Text = "Matricular";
             this.subMatricular.Click += new System.EventHandler(this.matricularToolStripMenuItem_Click);
             // 
             // reservaToolStripMenuItem
             // 
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
-            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.reservaToolStripMenuItem.Text = "Reserva";
             this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
             // 
             // confirmacionRToolStripMenuItem
             // 
             this.confirmacionRToolStripMenuItem.Name = "confirmacionRToolStripMenuItem";
-            this.confirmacionRToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.confirmacionRToolStripMenuItem.Text = "Confirmación R.";
+            this.confirmacionRToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.confirmacionRToolStripMenuItem.Text = "Confirmación de Reserva";
             this.confirmacionRToolStripMenuItem.Click += new System.EventHandler(this.confirmacionRToolStripMenuItem_Click);
             // 
             // menUsuarios
@@ -149,21 +150,21 @@
             // subRoles
             // 
             this.subRoles.Name = "subRoles";
-            this.subRoles.Size = new System.Drawing.Size(179, 26);
+            this.subRoles.Size = new System.Drawing.Size(272, 26);
             this.subRoles.Text = "Roles";
             this.subRoles.Click += new System.EventHandler(this.subRoles_Click);
             // 
             // subManUsarios
             // 
             this.subManUsarios.Name = "subManUsarios";
-            this.subManUsarios.Size = new System.Drawing.Size(179, 26);
-            this.subManUsarios.Text = "Man. Usuarios";
+            this.subManUsarios.Size = new System.Drawing.Size(272, 26);
+            this.subManUsarios.Text = "Mantenimiento de Usuarios";
             this.subManUsarios.Click += new System.EventHandler(this.subManUsarios_Click);
             // 
             // subAsignacion
             // 
             this.subAsignacion.Name = "subAsignacion";
-            this.subAsignacion.Size = new System.Drawing.Size(179, 26);
+            this.subAsignacion.Size = new System.Drawing.Size(272, 26);
             this.subAsignacion.Text = "Asignación";
             this.subAsignacion.Click += new System.EventHandler(this.subAsignacion_Click);
             // 
@@ -241,6 +242,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(854, 470);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);

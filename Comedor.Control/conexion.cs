@@ -16,19 +16,22 @@ namespace Comedor.Control
        Encryp en = new Encryp();
        public string open()
        {
-           
+           String path = Application.StartupPath;
+           string carpeta = System.IO.Path.Combine(path, "conections");
+           string connStrintext = System.IO.Path.Combine(carpeta, "CNX-SA-" + Dns.GetHostName() + ".txt");
            try
            {
-               string cad = "Data Source=UPG_INGENIERIA\\UPGINGENIERIA;Initial Catalog=SERV-ALIM;Persist Security Info=True;User ID=sa; Password=guille123456";
-               conex = new SqlConnection(cad);
+               string cad = File.ReadAllText(connStrintext);
+               string cadena = en.Desencriptar(cad);
+               conex = new SqlConnection(cadena);
 
                conex.Open();
                return "ok";
            }
            catch (Exception e)
            {
-
                return "error";
+
            }
           
        }

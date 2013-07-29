@@ -88,18 +88,18 @@
             this.cmbGrupo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbArea = new System.Windows.Forms.ComboBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabUsuario = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtlogin = new System.Windows.Forms.TextBox();
-            this.txtPassw = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtRepeatPassw = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.lblNota = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnGuardarUsuario = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblNota = new System.Windows.Forms.Label();
+            this.txtPassw = new System.Windows.Forms.TextBox();
+            this.txtRepeatPassw = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtlogin = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -113,9 +113,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tabUsuario.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -132,7 +132,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -155,6 +156,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Controls.Add(this.txtDescripcionCont);
             this.groupBox5.Controls.Add(this.label14);
@@ -173,7 +175,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(24, 62);
+            this.label15.Location = new System.Drawing.Point(16, 64);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 21);
             this.label15.TabIndex = 27;
@@ -181,7 +183,7 @@
             // 
             // txtDescripcionCont
             // 
-            this.txtDescripcionCont.Location = new System.Drawing.Point(20, 75);
+            this.txtDescripcionCont.Location = new System.Drawing.Point(20, 87);
             this.txtDescripcionCont.MaxLength = 300;
             this.txtDescripcionCont.Multiline = true;
             this.txtDescripcionCont.Name = "txtDescripcionCont";
@@ -199,21 +201,22 @@
             // 
             // btnAddCont
             // 
-            this.btnAddCont.Location = new System.Drawing.Point(246, 81);
+            this.btnAddCont.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCont.Image = global::Comedor.Vista.Properties.Resources.accept;
+            this.btnAddCont.Location = new System.Drawing.Point(244, 110);
             this.btnAddCont.Name = "btnAddCont";
-            this.btnAddCont.Size = new System.Drawing.Size(43, 39);
+            this.btnAddCont.Size = new System.Drawing.Size(30, 26);
             this.btnAddCont.TabIndex = 24;
-            this.btnAddCont.Text = "+";
             this.btnAddCont.UseVisualStyleBackColor = true;
             this.btnAddCont.Click += new System.EventHandler(this.btnAddCont_Click);
             // 
             // txtValorCont
             // 
-            this.txtValorCont.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorCont.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorCont.Location = new System.Drawing.Point(108, 28);
             this.txtValorCont.MaxLength = 100;
             this.txtValorCont.Name = "txtValorCont";
-            this.txtValorCont.Size = new System.Drawing.Size(190, 28);
+            this.txtValorCont.Size = new System.Drawing.Size(190, 29);
             this.txtValorCont.TabIndex = 23;
             // 
             // cmbTipoCont
@@ -235,9 +238,9 @@
             // 
             this.dgvContacto.BackgroundColor = System.Drawing.Color.White;
             this.dgvContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContacto.Location = new System.Drawing.Point(6, 130);
+            this.dgvContacto.Location = new System.Drawing.Point(6, 147);
             this.dgvContacto.Name = "dgvContacto";
-            this.dgvContacto.Size = new System.Drawing.Size(292, 120);
+            this.dgvContacto.Size = new System.Drawing.Size(292, 103);
             this.dgvContacto.TabIndex = 0;
             this.dgvContacto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContacto_CellClick);
             this.dgvContacto.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContacto_CellMouseEnter);
@@ -264,6 +267,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.txtDistrito);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
@@ -280,7 +284,7 @@
             // 
             // txtDistrito
             // 
-            this.txtDistrito.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDistrito.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDistrito.Location = new System.Drawing.Point(124, 114);
             this.txtDistrito.MaxLength = 200;
             this.txtDistrito.Multiline = true;
@@ -340,6 +344,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.label4.Location = new System.Drawing.Point(85, 250);
             this.label4.Name = "label4";
@@ -349,14 +354,15 @@
             // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Font = new System.Drawing.Font("Modern No. 20", 14.25F);
+            this.dtpFechaNac.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNac.Location = new System.Drawing.Point(16, 274);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(308, 28);
+            this.dtpFechaNac.Size = new System.Drawing.Size(308, 29);
             this.dtpFechaNac.TabIndex = 17;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.cmbDni);
             this.groupBox2.Controls.Add(this.txtDni);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
@@ -383,16 +389,17 @@
             // txtDni
             // 
             this.txtDni.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDni.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDni.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDni.Location = new System.Drawing.Point(35, 67);
             this.txtDni.MaxLength = 50;
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(220, 28);
+            this.txtDni.Size = new System.Drawing.Size(220, 29);
             this.txtDni.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.label3.Location = new System.Drawing.Point(542, 36);
             this.label3.Name = "label3";
@@ -402,16 +409,17 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(439, 60);
+            this.txtApellidos.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(438, 60);
             this.txtApellidos.MaxLength = 50;
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(279, 28);
+            this.txtApellidos.Size = new System.Drawing.Size(279, 29);
             this.txtApellidos.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.label2.Location = new System.Drawing.Point(240, 36);
             this.label2.Name = "label2";
@@ -421,18 +429,19 @@
             // 
             // txtSegNombre
             // 
-            this.txtSegNombre.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSegNombre.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSegNombre.Location = new System.Drawing.Point(220, 60);
             this.txtSegNombre.MaxLength = 50;
             this.txtSegNombre.Name = "txtSegNombre";
-            this.txtSegNombre.Size = new System.Drawing.Size(172, 28);
+            this.txtSegNombre.Size = new System.Drawing.Size(172, 29);
             this.txtSegNombre.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 36);
+            this.label1.Location = new System.Drawing.Point(40, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 21);
             this.label1.TabIndex = 11;
@@ -440,16 +449,18 @@
             // 
             // txtPrimerNombre
             // 
-            this.txtPrimerNombre.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerNombre.Location = new System.Drawing.Point(8, 60);
+            this.txtPrimerNombre.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrimerNombre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPrimerNombre.Location = new System.Drawing.Point(16, 60);
             this.txtPrimerNombre.MaxLength = 50;
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(172, 28);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(172, 29);
             this.txtPrimerNombre.TabIndex = 10;
             // 
             // tabConsumidor
             // 
-            this.tabConsumidor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabConsumidor.BackColor = System.Drawing.Color.White;
+            this.tabConsumidor.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.tabConsumidor.Controls.Add(this.btnCancelar);
             this.tabConsumidor.Controls.Add(this.btnGuardar);
             this.tabConsumidor.Controls.Add(this.groupBox4);
@@ -507,6 +518,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Controls.Add(this.chbContrato);
             this.groupBox4.Controls.Add(this.dgvPeriodos);
@@ -522,6 +534,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
             this.groupBox6.Controls.Add(this.pictureCheck);
             this.groupBox6.Controls.Add(this.btnBuscarCodigo);
             this.groupBox6.Controls.Add(this.txtCodigo);
@@ -636,6 +649,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtCodUni);
             this.groupBox1.Controls.Add(this.cmbCiclo);
@@ -664,11 +678,11 @@
             // txtCodUni
             // 
             this.txtCodUni.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodUni.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodUni.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodUni.Location = new System.Drawing.Point(335, 116);
             this.txtCodUni.MaxLength = 50;
             this.txtCodUni.Name = "txtCodUni";
-            this.txtCodUni.Size = new System.Drawing.Size(220, 28);
+            this.txtCodUni.Size = new System.Drawing.Size(220, 33);
             this.txtCodUni.TabIndex = 19;
             // 
             // cmbCiclo
@@ -778,12 +792,9 @@
             this.cmbArea.Size = new System.Drawing.Size(240, 29);
             this.cmbArea.TabIndex = 17;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // tabUsuario
             // 
+            this.tabUsuario.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.tabUsuario.Controls.Add(this.btnCancel);
             this.tabUsuario.Controls.Add(this.btnGuardarUsuario);
             this.tabUsuario.Controls.Add(this.groupBox7);
@@ -794,84 +805,6 @@
             this.tabUsuario.TabIndex = 2;
             this.tabUsuario.Text = "Datos Usuario";
             this.tabUsuario.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(107, 40);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 21);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Usuario:";
-            // 
-            // txtlogin
-            // 
-            this.txtlogin.Location = new System.Drawing.Point(180, 37);
-            this.txtlogin.Name = "txtlogin";
-            this.txtlogin.Size = new System.Drawing.Size(168, 29);
-            this.txtlogin.TabIndex = 1;
-            // 
-            // txtPassw
-            // 
-            this.txtPassw.Location = new System.Drawing.Point(180, 93);
-            this.txtPassw.Name = "txtPassw";
-            this.txtPassw.Size = new System.Drawing.Size(168, 29);
-            this.txtPassw.TabIndex = 3;
-            this.txtPassw.UseSystemPasswordChar = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(28, 153);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(146, 21);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Repetir Contraseña:";
-            // 
-            // txtRepeatPassw
-            // 
-            this.txtRepeatPassw.Location = new System.Drawing.Point(180, 150);
-            this.txtRepeatPassw.Name = "txtRepeatPassw";
-            this.txtRepeatPassw.Size = new System.Drawing.Size(168, 29);
-            this.txtRepeatPassw.TabIndex = 5;
-            this.txtRepeatPassw.UseSystemPasswordChar = true;
-            this.txtRepeatPassw.UseWaitCursor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(82, 96);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(92, 21);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Contraseña:";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.lblNota);
-            this.groupBox7.Controls.Add(this.txtPassw);
-            this.groupBox7.Controls.Add(this.txtRepeatPassw);
-            this.groupBox7.Controls.Add(this.label17);
-            this.groupBox7.Controls.Add(this.label19);
-            this.groupBox7.Controls.Add(this.txtlogin);
-            this.groupBox7.Controls.Add(this.label18);
-            this.groupBox7.Location = new System.Drawing.Point(156, 26);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(402, 226);
-            this.groupBox7.TabIndex = 6;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Usuario";
-            // 
-            // lblNota
-            // 
-            this.lblNota.AutoSize = true;
-            this.lblNota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota.ForeColor = System.Drawing.Color.Blue;
-            this.lblNota.Location = new System.Drawing.Point(57, 208);
-            this.lblNota.Name = "lblNota";
-            this.lblNota.Size = new System.Drawing.Size(276, 15);
-            this.lblNota.TabIndex = 6;
-            this.lblNota.Text = "Nota: La contraseña debe contener 6-15 caracteres.";
             // 
             // btnCancel
             // 
@@ -913,11 +846,94 @@
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
             this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.lblNota);
+            this.groupBox7.Controls.Add(this.txtPassw);
+            this.groupBox7.Controls.Add(this.txtRepeatPassw);
+            this.groupBox7.Controls.Add(this.label17);
+            this.groupBox7.Controls.Add(this.label19);
+            this.groupBox7.Controls.Add(this.txtlogin);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Location = new System.Drawing.Point(156, 26);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(402, 226);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Usuario";
+            // 
+            // lblNota
+            // 
+            this.lblNota.AutoSize = true;
+            this.lblNota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNota.ForeColor = System.Drawing.Color.Blue;
+            this.lblNota.Location = new System.Drawing.Point(57, 208);
+            this.lblNota.Name = "lblNota";
+            this.lblNota.Size = new System.Drawing.Size(276, 15);
+            this.lblNota.TabIndex = 6;
+            this.lblNota.Text = "Nota: La contraseña debe contener 6-15 caracteres.";
+            // 
+            // txtPassw
+            // 
+            this.txtPassw.Location = new System.Drawing.Point(180, 93);
+            this.txtPassw.Name = "txtPassw";
+            this.txtPassw.Size = new System.Drawing.Size(168, 29);
+            this.txtPassw.TabIndex = 3;
+            this.txtPassw.UseSystemPasswordChar = true;
+            // 
+            // txtRepeatPassw
+            // 
+            this.txtRepeatPassw.Location = new System.Drawing.Point(180, 150);
+            this.txtRepeatPassw.Name = "txtRepeatPassw";
+            this.txtRepeatPassw.Size = new System.Drawing.Size(168, 29);
+            this.txtRepeatPassw.TabIndex = 5;
+            this.txtRepeatPassw.UseSystemPasswordChar = true;
+            this.txtRepeatPassw.UseWaitCursor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(107, 40);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(67, 21);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Usuario:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(82, 96);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(92, 21);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Contraseña:";
+            // 
+            // txtlogin
+            // 
+            this.txtlogin.Location = new System.Drawing.Point(180, 37);
+            this.txtlogin.Name = "txtlogin";
+            this.txtlogin.Size = new System.Drawing.Size(168, 29);
+            this.txtlogin.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(28, 153);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(146, 21);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Repetir Contraseña:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(782, 650);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
@@ -946,10 +962,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.tabUsuario.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

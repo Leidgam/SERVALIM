@@ -546,6 +546,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico_sec_comer.ico" />
+    <None Include="Resources\fond.jpg" />
+    <None Include="Resources\found.jpg" />
+    <None Include="Resources\white-back.jpg" />
     <None Include="Resources\next1.png" />
     <None Include="Resources\red_button.png" />
     <None Include="Resources\orange_button.png" />

@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guardarConnexion = new System.ComponentModel.BackgroundWorker();
+            this.Begin = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +59,12 @@
             // guardarConnexion
             // 
             this.guardarConnexion.DoWork += new System.ComponentModel.DoWorkEventHandler(this.guardarConnexion_DoWork);
+            this.guardarConnexion.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.guardarConnexion_RunWorkerCompleted);
+            // 
+            // Begin
+            // 
+            this.Begin.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Begin_DoWork);
+            this.Begin.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Begin_RunWorkerCompleted);
             // 
             // Loading
             // 
@@ -83,5 +90,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker guardarConnexion;
+        private System.ComponentModel.BackgroundWorker Begin;
     }
 }
