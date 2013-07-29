@@ -295,3 +295,5 @@ E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\RdlCompile.cache
 E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\RdlCompile.compiled
 E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.Acceso.Conexion.resources
 E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.Acceso.Loading.resources
+C:\Comedor\SERVALIM\Comedor.Vista\obj\Debug\Comedor.Vista.Acceso.Conexion.resources
+C:\Comedor\SERVALIM\Comedor.Vista\obj\Debug\Comedor.Vista.Acceso.Loading.resources
