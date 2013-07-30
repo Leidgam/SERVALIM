@@ -183,6 +183,16 @@ namespace Comedor.Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mast {
+            get {
+                object obj = ResourceManager.GetObject("mast", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap next {
             get {
                 object obj = ResourceManager.GetObject("next", resourceCulture);
@@ -226,6 +236,26 @@ namespace Comedor.Vista.Properties {
         internal static System.Drawing.Bitmap orange_button {
             get {
                 object obj = ResourceManager.GetObject("orange_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orig {
+            get {
+                object obj = ResourceManager.GetObject("orig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orig_serv {
+            get {
+                object obj = ResourceManager.GetObject("orig-serv", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +326,46 @@ namespace Comedor.Vista.Properties {
         internal static System.Drawing.Bitmap search_page {
             get {
                 object obj = ResourceManager.GetObject("search_page", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap servicio_alimentacion {
+            get {
+                object obj = ResourceManager.GetObject("servicio-alimentacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap servicio_alimentacion_small {
+            get {
+                object obj = ResourceManager.GetObject("servicio-alimentacion small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smal_serv {
+            get {
+                object obj = ResourceManager.GetObject("smal-serv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Small_servalim {
+            get {
+                object obj = ResourceManager.GetObject("Small-servalim", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

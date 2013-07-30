@@ -546,6 +546,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico_sec_comer.ico" />
+    <None Include="Resources\mast.png" />
+    <None Include="Resources\orig.png" />
+    <None Include="Resources\orig-serv.png" />
+    <None Include="Resources\smal-serv.png" />
+    <None Include="Resources\Small-servalim.png" />
+    <None Include="Resources\servicio-alimentacion small.png" />
+    <None Include="Resources\servicio-alimentacion.png" />
     <None Include="Resources\fond.jpg" />
     <None Include="Resources\found.jpg" />
     <None Include="Resources\white-back.jpg" />
