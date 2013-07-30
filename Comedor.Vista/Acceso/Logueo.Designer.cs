@@ -47,7 +47,7 @@
             // 
             pictureBox1.BackColor = System.Drawing.Color.Transparent;
             pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            pictureBox1.Location = new System.Drawing.Point(29, 21);
+            pictureBox1.Location = new System.Drawing.Point(27, 37);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new System.Drawing.Size(223, 68);
             pictureBox1.TabIndex = 19;
@@ -81,7 +81,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(84, 39);
+            this.label4.Location = new System.Drawing.Point(87, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 25);
             this.label4.TabIndex = 16;
