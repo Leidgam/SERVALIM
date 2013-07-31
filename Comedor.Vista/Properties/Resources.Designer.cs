@@ -143,6 +143,16 @@ namespace Comedor.Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DSC02264 {
+            get {
+                object obj = ResourceManager.GetObject("DSC02264", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
@@ -216,6 +226,16 @@ namespace Comedor.Vista.Properties {
         internal static System.Drawing.Bitmap fond {
             get {
                 object obj = ResourceManager.GetObject("fond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fondo_Comedor___SC {
+            get {
+                object obj = ResourceManager.GetObject("Fondo-Comedor - SC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

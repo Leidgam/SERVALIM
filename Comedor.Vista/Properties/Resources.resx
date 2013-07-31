@@ -157,9 +157,6 @@
   <data name="bolsa32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bolsa32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="male_female_users" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\male_female_users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fondologin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondologin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,6 +181,9 @@
   <data name="linea1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\linea1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DSC02264" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DSC02264.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="upeu_logo_blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upeu_logo_blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,8 +196,11 @@
   <data name="orange_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orange_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="male_female_users" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male_female_users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuario_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario_mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +208,11 @@
   <data name="accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fond" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fond.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Entrar_efectoazul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Entrar_efectoazul.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="servalim_hd_blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\servalim_hd_blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="found" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\found.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +223,8 @@
   <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="servalim_hd_blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\servalim_hd_blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo_camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_camera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="upeu_logo_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upeu_logo_mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,14 +247,20 @@
   <data name="book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="open_folder_warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open_folder_warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photo_camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_camera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Entrar_efectoazul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Entrar_efectoazul.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Entrar_efecto_azullogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Entrar_efecto_azullogin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fond.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="red_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,7 +271,7 @@
   <data name="Entrar_efecto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entrar_efecto.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Entrar_efecto_azullogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Entrar_efecto_azullogin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fondo-Comedor - SC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fondo-Comedor - SC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

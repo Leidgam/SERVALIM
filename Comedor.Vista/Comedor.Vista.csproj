@@ -546,6 +546,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico_sec_comer.ico" />
+    <None Include="Resources\Fondo-Comedor - SC.png" />
+    <None Include="Resources\DSC02264.jpg" />
     <None Include="Resources\Entrar_efecto_azullogin.gif" />
     <None Include="Resources\Entrar_efecto_azuloscuro.gif" />
     <None Include="Resources\servalim_hd_blanco.png" />
