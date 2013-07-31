@@ -43,9 +43,9 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(362, 22);
+            this.btnAceptar.Location = new System.Drawing.Point(362, 28);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(102, 39);
+            this.btnAceptar.Size = new System.Drawing.Size(101, 29);
             this.btnAceptar.TabIndex = 1;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -54,6 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(27, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 21);
@@ -64,6 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(495, 90);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAceptar);

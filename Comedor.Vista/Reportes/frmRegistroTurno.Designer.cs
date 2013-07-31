@@ -79,6 +79,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.groupBox1.Controls.Add(this.cmbTurno);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -111,6 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(469, 108);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -121,6 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(608, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -131,6 +134,7 @@
             // rbnalmuerzo
             // 
             this.rbnalmuerzo.AutoSize = true;
+            this.rbnalmuerzo.BackColor = System.Drawing.Color.Transparent;
             this.rbnalmuerzo.Checked = true;
             this.rbnalmuerzo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.rbnalmuerzo.Location = new System.Drawing.Point(589, 59);
@@ -139,11 +143,12 @@
             this.rbnalmuerzo.Size = new System.Drawing.Size(96, 25);
             this.rbnalmuerzo.TabIndex = 6;
             this.rbnalmuerzo.Text = "Almuerzo";
-            this.rbnalmuerzo.UseVisualStyleBackColor = true;
+            this.rbnalmuerzo.UseVisualStyleBackColor = false;
             // 
             // rbncena
             // 
             this.rbncena.AutoSize = true;
+            this.rbncena.BackColor = System.Drawing.Color.Transparent;
             this.rbncena.Checked = true;
             this.rbncena.CheckState = System.Windows.Forms.CheckState.Checked;
             this.rbncena.Location = new System.Drawing.Point(707, 59);
@@ -152,11 +157,12 @@
             this.rbncena.Size = new System.Drawing.Size(64, 25);
             this.rbncena.TabIndex = 5;
             this.rbncena.Text = "Cena";
-            this.rbncena.UseVisualStyleBackColor = true;
+            this.rbncena.UseVisualStyleBackColor = false;
             // 
             // rbndesayuno
             // 
             this.rbndesayuno.AutoSize = true;
+            this.rbndesayuno.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.rbndesayuno.Checked = true;
             this.rbndesayuno.CheckState = System.Windows.Forms.CheckState.Checked;
             this.rbndesayuno.Location = new System.Drawing.Point(473, 59);
@@ -169,6 +175,7 @@
             // 
             // panelfecha
             // 
+            this.panelfecha.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.panelfecha.Controls.Add(this.label3);
             this.panelfecha.Controls.Add(this.dtpfecha);
             this.panelfecha.Location = new System.Drawing.Point(9, 59);
@@ -180,6 +187,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(33, 5);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -198,6 +206,7 @@
             // rbnDesdeHasta
             // 
             this.rbnDesdeHasta.AutoSize = true;
+            this.rbnDesdeHasta.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.rbnDesdeHasta.Location = new System.Drawing.Point(254, 27);
             this.rbnDesdeHasta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbnDesdeHasta.Name = "rbnDesdeHasta";
@@ -210,6 +219,7 @@
             // rbnUnafecha
             // 
             this.rbnUnafecha.AutoSize = true;
+            this.rbnUnafecha.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.rbnUnafecha.Checked = true;
             this.rbnUnafecha.Location = new System.Drawing.Point(66, 27);
             this.rbnUnafecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -223,6 +233,7 @@
             // 
             // panelperiodo
             // 
+            this.panelperiodo.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.panelperiodo.Controls.Add(this.label2);
             this.panelperiodo.Controls.Add(this.label1);
             this.panelperiodo.Controls.Add(this.dtpfechaInicio);
@@ -246,6 +257,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(33, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -320,6 +332,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(572, 539);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 21);
@@ -359,6 +372,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(831, 576);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txttotal);

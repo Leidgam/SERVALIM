@@ -72,6 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(571, 358);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvUsuarios);

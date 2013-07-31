@@ -39,6 +39,8 @@
             this.dtpFechaUno = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvRegistro = new System.Windows.Forms.DataGridView();
@@ -47,6 +49,8 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSig = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtCodUniv = new System.Windows.Forms.TextBox();
             this.txtEAP = new System.Windows.Forms.TextBox();
@@ -57,16 +61,26 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnRojo = new System.Windows.Forms.Button();
+            this.btnAmarillo = new System.Windows.Forms.Button();
             this.lblIncidencia = new System.Windows.Forms.Label();
+            this.btnVerde = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.lblCenSi = new System.Windows.Forms.Label();
             this.lblCenNo = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.lblAlmSi = new System.Windows.Forms.Label();
             this.lblAlmNo = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lblDesSi = new System.Windows.Forms.Label();
             this.lblDesNo = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -74,22 +88,8 @@
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnSig = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnRojo = new System.Windows.Forms.Button();
-            this.btnAmarillo = new System.Windows.Forms.Button();
-            this.btnVerde = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.btnDetalles = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -138,6 +138,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.dtpFechaInicio);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dtpFechaFin);
@@ -151,18 +152,20 @@
             // rbnDesdeHasta
             // 
             this.rbnDesdeHasta.AutoSize = true;
+            this.rbnDesdeHasta.BackColor = System.Drawing.Color.Transparent;
             this.rbnDesdeHasta.Location = new System.Drawing.Point(133, 27);
             this.rbnDesdeHasta.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.rbnDesdeHasta.Name = "rbnDesdeHasta";
             this.rbnDesdeHasta.Size = new System.Drawing.Size(123, 25);
             this.rbnDesdeHasta.TabIndex = 7;
             this.rbnDesdeHasta.Text = "Desdes-Hasta";
-            this.rbnDesdeHasta.UseVisualStyleBackColor = true;
+            this.rbnDesdeHasta.UseVisualStyleBackColor = false;
             this.rbnDesdeHasta.CheckedChanged += new System.EventHandler(this.rbnDesdeHasta_CheckedChanged);
             // 
             // rbnUnafecha
             // 
             this.rbnUnafecha.AutoSize = true;
+            this.rbnUnafecha.BackColor = System.Drawing.Color.Transparent;
             this.rbnUnafecha.Checked = true;
             this.rbnUnafecha.Location = new System.Drawing.Point(10, 27);
             this.rbnUnafecha.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -171,7 +174,7 @@
             this.rbnUnafecha.TabIndex = 6;
             this.rbnUnafecha.TabStop = true;
             this.rbnUnafecha.Text = "Una Fecha";
-            this.rbnUnafecha.UseVisualStyleBackColor = true;
+            this.rbnUnafecha.UseVisualStyleBackColor = false;
             this.rbnUnafecha.CheckedChanged += new System.EventHandler(this.rbnUnafecha_CheckedChanged);
             // 
             // label3
@@ -194,6 +197,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.dtpFechaUno);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(10, 52);
@@ -204,6 +208,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.panel1);
@@ -217,6 +222,34 @@
             this.groupBox1.Size = new System.Drawing.Size(681, 149);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Image = global::Comedor.Vista.Properties.Resources.printer;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(536, 93);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(108, 37);
+            this.btnImprimir.TabIndex = 11;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::Comedor.Vista.Properties.Resources.search_male_user;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(536, 45);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(108, 37);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtCodigo
             // 
@@ -232,6 +265,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(23, 166);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -252,6 +286,7 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
+            this.lblnombre.BackColor = System.Drawing.Color.Transparent;
             this.lblnombre.Location = new System.Drawing.Point(247, 166);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(100, 21);
@@ -301,6 +336,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(417, 585);
             this.panel3.TabIndex = 50;
+            // 
+            // btnSig
+            // 
+            this.btnSig.Image = global::Comedor.Vista.Properties.Resources.next;
+            this.btnSig.Location = new System.Drawing.Point(107, 546);
+            this.btnSig.Name = "btnSig";
+            this.btnSig.Size = new System.Drawing.Size(40, 23);
+            this.btnSig.TabIndex = 54;
+            this.btnSig.UseVisualStyleBackColor = true;
+            this.btnSig.Click += new System.EventHandler(this.btnSig_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Image = global::Comedor.Vista.Properties.Resources.back;
+            this.btnAtras.Location = new System.Drawing.Point(61, 546);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(40, 23);
+            this.btnAtras.TabIndex = 53;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // groupBox3
             // 
@@ -436,6 +491,42 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DETALLES";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 251);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 17);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Cantidad:";
+            // 
+            // btnRojo
+            // 
+            this.btnRojo.FlatAppearance.BorderSize = 0;
+            this.btnRojo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRojo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRojo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRojo.Image = global::Comedor.Vista.Properties.Resources.red_button;
+            this.btnRojo.Location = new System.Drawing.Point(148, 247);
+            this.btnRojo.Name = "btnRojo";
+            this.btnRojo.Size = new System.Drawing.Size(24, 26);
+            this.btnRojo.TabIndex = 25;
+            this.btnRojo.UseVisualStyleBackColor = true;
+            // 
+            // btnAmarillo
+            // 
+            this.btnAmarillo.FlatAppearance.BorderSize = 0;
+            this.btnAmarillo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAmarillo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAmarillo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAmarillo.Image = global::Comedor.Vista.Properties.Resources.orange_button;
+            this.btnAmarillo.Location = new System.Drawing.Point(126, 247);
+            this.btnAmarillo.Name = "btnAmarillo";
+            this.btnAmarillo.Size = new System.Drawing.Size(24, 26);
+            this.btnAmarillo.TabIndex = 24;
+            this.btnAmarillo.UseVisualStyleBackColor = true;
+            // 
             // lblIncidencia
             // 
             this.lblIncidencia.AutoSize = true;
@@ -444,6 +535,19 @@
             this.lblIncidencia.Size = new System.Drawing.Size(19, 21);
             this.lblIncidencia.TabIndex = 23;
             this.lblIncidencia.Text = "0";
+            // 
+            // btnVerde
+            // 
+            this.btnVerde.FlatAppearance.BorderSize = 0;
+            this.btnVerde.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVerde.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVerde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerde.Image = global::Comedor.Vista.Properties.Resources.green_button;
+            this.btnVerde.Location = new System.Drawing.Point(104, 247);
+            this.btnVerde.Name = "btnVerde";
+            this.btnVerde.Size = new System.Drawing.Size(24, 26);
+            this.btnVerde.TabIndex = 22;
+            this.btnVerde.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -475,6 +579,32 @@
             this.lblCenNo.Text = "000";
             this.lblCenNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = global::Comedor.Vista.Properties.Resources.delete;
+            this.button8.Location = new System.Drawing.Point(152, 150);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(24, 26);
+            this.button8.TabIndex = 18;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Image = global::Comedor.Vista.Properties.Resources.accept;
+            this.button9.Location = new System.Drawing.Point(61, 150);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(24, 26);
+            this.button9.TabIndex = 17;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -505,6 +635,32 @@
             this.lblAlmNo.Text = "000";
             this.lblAlmNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = global::Comedor.Vista.Properties.Resources.delete;
+            this.button6.Location = new System.Drawing.Point(151, 104);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(24, 26);
+            this.button6.TabIndex = 13;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::Comedor.Vista.Properties.Resources.accept;
+            this.button7.Location = new System.Drawing.Point(60, 104);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(24, 26);
+            this.button7.TabIndex = 12;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -534,6 +690,32 @@
             this.lblDesNo.TabIndex = 9;
             this.lblDesNo.Text = "000";
             this.lblDesNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::Comedor.Vista.Properties.Resources.delete;
+            this.button5.Location = new System.Drawing.Point(151, 55);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(24, 26);
+            this.button5.TabIndex = 4;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::Comedor.Vista.Properties.Resources.accept;
+            this.button4.Location = new System.Drawing.Point(60, 55);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(24, 26);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -600,153 +782,6 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "SERVICIO ALIMENTACION";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 251);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 17);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Cantidad:";
-            // 
-            // btnSig
-            // 
-            this.btnSig.Image = global::Comedor.Vista.Properties.Resources.next;
-            this.btnSig.Location = new System.Drawing.Point(107, 546);
-            this.btnSig.Name = "btnSig";
-            this.btnSig.Size = new System.Drawing.Size(40, 23);
-            this.btnSig.TabIndex = 54;
-            this.btnSig.UseVisualStyleBackColor = true;
-            this.btnSig.Click += new System.EventHandler(this.btnSig_Click);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Image = global::Comedor.Vista.Properties.Resources.back;
-            this.btnAtras.Location = new System.Drawing.Point(61, 546);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(40, 23);
-            this.btnAtras.TabIndex = 53;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // btnRojo
-            // 
-            this.btnRojo.FlatAppearance.BorderSize = 0;
-            this.btnRojo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRojo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRojo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRojo.Image = global::Comedor.Vista.Properties.Resources.red_button;
-            this.btnRojo.Location = new System.Drawing.Point(148, 247);
-            this.btnRojo.Name = "btnRojo";
-            this.btnRojo.Size = new System.Drawing.Size(24, 26);
-            this.btnRojo.TabIndex = 25;
-            this.btnRojo.UseVisualStyleBackColor = true;
-            // 
-            // btnAmarillo
-            // 
-            this.btnAmarillo.FlatAppearance.BorderSize = 0;
-            this.btnAmarillo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAmarillo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAmarillo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAmarillo.Image = global::Comedor.Vista.Properties.Resources.orange_button;
-            this.btnAmarillo.Location = new System.Drawing.Point(126, 247);
-            this.btnAmarillo.Name = "btnAmarillo";
-            this.btnAmarillo.Size = new System.Drawing.Size(24, 26);
-            this.btnAmarillo.TabIndex = 24;
-            this.btnAmarillo.UseVisualStyleBackColor = true;
-            // 
-            // btnVerde
-            // 
-            this.btnVerde.FlatAppearance.BorderSize = 0;
-            this.btnVerde.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVerde.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVerde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerde.Image = global::Comedor.Vista.Properties.Resources.green_button;
-            this.btnVerde.Location = new System.Drawing.Point(104, 247);
-            this.btnVerde.Name = "btnVerde";
-            this.btnVerde.Size = new System.Drawing.Size(24, 26);
-            this.btnVerde.TabIndex = 22;
-            this.btnVerde.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = global::Comedor.Vista.Properties.Resources.delete;
-            this.button8.Location = new System.Drawing.Point(152, 150);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(24, 26);
-            this.button8.TabIndex = 18;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = global::Comedor.Vista.Properties.Resources.accept;
-            this.button9.Location = new System.Drawing.Point(61, 150);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(24, 26);
-            this.button9.TabIndex = 17;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = global::Comedor.Vista.Properties.Resources.delete;
-            this.button6.Location = new System.Drawing.Point(151, 104);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(24, 26);
-            this.button6.TabIndex = 13;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::Comedor.Vista.Properties.Resources.accept;
-            this.button7.Location = new System.Drawing.Point(60, 104);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(24, 26);
-            this.button7.TabIndex = 12;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = global::Comedor.Vista.Properties.Resources.delete;
-            this.button5.Location = new System.Drawing.Point(151, 55);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(24, 26);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::Comedor.Vista.Properties.Resources.accept;
-            this.button4.Location = new System.Drawing.Point(60, 55);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(24, 26);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // pbxFoto
             // 
             this.pbxFoto.BackColor = System.Drawing.Color.White;
@@ -771,39 +806,12 @@
             this.btnDetalles.UseVisualStyleBackColor = true;
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Image = global::Comedor.Vista.Properties.Resources.printer;
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(536, 93);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(108, 37);
-            this.btnImprimir.TabIndex = 11;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::Comedor.Vista.Properties.Resources.search_male_user;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(536, 45);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(108, 37);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // frmConsumoPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(709, 593);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDetalles);
@@ -817,7 +825,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmConsumoPersona";
-            this.Text = "frmConsumoPersona";
+            this.Text = "Reporte de Consumo";
             this.Load += new System.EventHandler(this.frmConsumoPersona_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

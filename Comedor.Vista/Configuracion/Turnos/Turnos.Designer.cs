@@ -52,6 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(42, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
@@ -108,9 +109,9 @@
             // 
             // btnNuevoTurno
             // 
-            this.btnNuevoTurno.Location = new System.Drawing.Point(480, 19);
+            this.btnNuevoTurno.Location = new System.Drawing.Point(453, 19);
             this.btnNuevoTurno.Name = "btnNuevoTurno";
-            this.btnNuevoTurno.Size = new System.Drawing.Size(77, 43);
+            this.btnNuevoTurno.Size = new System.Drawing.Size(104, 43);
             this.btnNuevoTurno.TabIndex = 5;
             this.btnNuevoTurno.Text = "Nuevo Turno";
             this.btnNuevoTurno.UseVisualStyleBackColor = true;
@@ -121,6 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(588, 409);
             this.Controls.Add(this.btnNuevoTurno);
             this.Controls.Add(this.groupBox1);

@@ -58,6 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(46, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
@@ -67,6 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(250, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
@@ -84,12 +86,13 @@
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
+            this.chkTodos.BackColor = System.Drawing.Color.Transparent;
             this.chkTodos.Location = new System.Drawing.Point(24, 403);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(56, 17);
             this.chkTodos.TabIndex = 5;
             this.chkTodos.Text = "Todos";
-            this.chkTodos.UseVisualStyleBackColor = true;
+            this.chkTodos.UseVisualStyleBackColor = false;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
             // btnReasignar
@@ -106,6 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(774, 457);
             this.Controls.Add(this.btnReasignar);
             this.Controls.Add(this.chkTodos);

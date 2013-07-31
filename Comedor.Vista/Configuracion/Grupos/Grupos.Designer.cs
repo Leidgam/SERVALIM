@@ -47,11 +47,11 @@
             // 
             // btnNuevoGrupo
             // 
-            this.btnNuevoGrupo.Location = new System.Drawing.Point(450, 12);
+            this.btnNuevoGrupo.Location = new System.Drawing.Point(443, 12);
             this.btnNuevoGrupo.Name = "btnNuevoGrupo";
-            this.btnNuevoGrupo.Size = new System.Drawing.Size(65, 34);
+            this.btnNuevoGrupo.Size = new System.Drawing.Size(95, 34);
             this.btnNuevoGrupo.TabIndex = 3;
-            this.btnNuevoGrupo.Text = "Grupo Nuevo";
+            this.btnNuevoGrupo.Text = "Nuevo Grupo";
             this.btnNuevoGrupo.UseVisualStyleBackColor = true;
             this.btnNuevoGrupo.Click += new System.EventHandler(this.btnNuevoGrupo_Click);
             // 
@@ -60,6 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(561, 385);
             this.Controls.Add(this.btnNuevoGrupo);
             this.Controls.Add(this.dgvGrupos);

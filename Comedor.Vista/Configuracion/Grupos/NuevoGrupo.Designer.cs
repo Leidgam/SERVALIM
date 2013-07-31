@@ -39,6 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(35, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
@@ -55,6 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(16, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
@@ -71,9 +73,9 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(113, 167);
+            this.btnCrear.Location = new System.Drawing.Point(88, 167);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(62, 43);
+            this.btnCrear.Size = new System.Drawing.Size(91, 43);
             this.btnCrear.TabIndex = 6;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
@@ -81,9 +83,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(239, 168);
+            this.button2.Location = new System.Drawing.Point(263, 168);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 42);
+            this.button2.Size = new System.Drawing.Size(89, 42);
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -93,7 +95,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 230);
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
+            this.ClientSize = new System.Drawing.Size(376, 230);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtDescripcion);
@@ -103,7 +106,7 @@
             this.MaximizeBox = false;
             this.Name = "NuevoGrupo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Grupo";
+            this.Text = "Nuevo Grupo";
             this.Load += new System.EventHandler(this.NuevoGrupo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
