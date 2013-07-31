@@ -546,6 +546,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico_sec_comer.ico" />
+    <None Include="Resources\fondochino.jpg" />
+    <None Include="Resources\comida_japonesa-1600x1200.jpg" />
     <None Include="Resources\Fondo-Comedor - SC.png" />
     <None Include="Resources\DSC02264.jpg" />
     <None Include="Resources\Entrar_efecto_azullogin.gif" />

@@ -242,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.found;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.fondochino;
             this.ClientSize = new System.Drawing.Size(854, 470);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
