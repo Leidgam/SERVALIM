@@ -25,6 +25,16 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Incidencias" msprop:Generator_TableClassName="IncidenciasDataTable" msprop:Generator_TableVarName="tableIncidencias" msprop:Generator_RowChangedName="IncidenciasRowChanged" msprop:Generator_TablePropName="Incidencias" msprop:Generator_RowDeletingName="IncidenciasRowDeleting" msprop:Generator_RowChangingName="IncidenciasRowChanging" msprop:Generator_RowEvHandlerName="IncidenciasRowChangeEventHandler" msprop:Generator_RowDeletedName="IncidenciasRowDeleted" msprop:Generator_RowClassName="IncidenciasRow" msprop:Generator_UserTableName="Incidencias" msprop:Generator_RowEvArgName="IncidenciasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_UserColumnName="Numero" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:string" minOccurs="0" />
+              <xs:element name="Gravedad" msprop:Generator_ColumnVarNameInTable="columnGravedad" msprop:Generator_ColumnPropNameInRow="Gravedad" msprop:Generator_ColumnPropNameInTable="GravedadColumn" msprop:Generator_UserColumnName="Gravedad" type="xs:string" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

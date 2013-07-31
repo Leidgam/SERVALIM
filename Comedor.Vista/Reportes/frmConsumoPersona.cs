@@ -24,7 +24,7 @@ namespace Comedor.Vista
         KeyPressEventArgs temp;
         String idconsumidor = "";
 
-        
+        List<Incidencia> ListInc= new List<Incidencia>();
         #endregion
 
         public frmConsumoPersona()
@@ -177,7 +177,13 @@ namespace Comedor.Vista
             txtFacultad.Text = datosconsumidor.EAP.Facultad.Nombre;
             txtEAP.Text = datosconsumidor.EAP.Nombre;
             txtCodUniv.Text = datosconsumidor.CodUniversitario;
-            pbxFoto.Image = Image.FromFile("D:/Comedor2.0/Fotos/"+datosconsumidor.Persona.IdPersona+".jpg");
+            try
+            {
+                pbxFoto.Image = Image.FromFile(@"\\JMGDIEL\Fotos\" + datosconsumidor.Persona.IdPersona + ".jpg");
+            }
+            catch (Exception ex)
+            {
+            }
 
             //fecha FechaUno-FechaDesde/Hasta
             int tipo=0;
@@ -265,7 +271,7 @@ namespace Comedor.Vista
             lblAlmSi.Text = AlmSi.ToString(); lblAlmNo.Text = AlmNo.ToString();
             lblCenSi.Text = CenSi.ToString(); lblCenNo.Text = CenNo.ToString();
             m_consumidor mcon = new m_consumidor();
-            List<Incidencia> ListInc = new List<Incidencia>();
+            ListInc = new List<Incidencia>();
             ListInc = mcon.ListarIncidencias(idconsumidor);
             lblIncidencia.Text = ListInc.Count().ToString();
             if (ListInc.Count() < 3) { ubicacionIcono(btnVerde, true); }
@@ -374,11 +380,13 @@ namespace Comedor.Vista
                 MessageBox.Show("Inserte el codigo");
                 return;
             }
-            MessageBox.Show(datosconsumidor.Area.Nombre);
+            this.Cursor = Cursors.AppStarting;
             Reportes.PrintReportConsumidorPersona from = new Reportes.PrintReportConsumidorPersona();
             from.ListConsumidor = ListRegistro;
             from.cons = datosconsumidor;
+            from.incidencias = this.ListInc;
             from.ShowDialog();
+            this.Cursor = Cursors.Default;
         }
 
         private void btnSig_Click(object sender, EventArgs e)

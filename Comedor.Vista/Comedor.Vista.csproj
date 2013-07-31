@@ -222,6 +222,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Reportes\DataSet3.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\DataSet3.Designer.cs">
       <DependentUpon>DataSet3.xsd</DependentUpon>
       <AutoGen>True</AutoGen>

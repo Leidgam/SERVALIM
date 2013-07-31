@@ -19,7 +19,7 @@ namespace Comedor.Vista.Reportes
     {
         public List<ConsumidorTurno> ListConsumidor;
         public consumidor cons;
-
+        public List<Incidencia> incidencias;
         
         private DataSet3 reporte;
 
@@ -41,11 +41,11 @@ namespace Comedor.Vista.Reportes
             rvReporte.LocalReport.DataSources.Clear();
             llenarDatos();
             //String exeFolder = Path.GetDirectoryName(Application.ExecutablePath);
-          //  String imgPath = Path.Combine(exeFolder, "D:/Comedor2.0/Fotos/" + cons.Persona.IdPersona + ".jpg");
+            String imgPath =  @"\\JMGDIEL\Fotos\" + cons.Persona.IdPersona + ".jpg";
             
-        //    var file = new Uri(imgPath);
+            var file = new Uri(imgPath);
             List<ReportParameter> parameters = new List<ReportParameter>();
-      //      ReportParameter path = new ReportParameter("Path", file.AbsoluteUri);
+            ReportParameter path = new ReportParameter("Path", file.AbsoluteUri);
             ReportParameter CodUniv = new ReportParameter("CodUniv", cons.CodUniversitario);
             ReportParameter Apellidos= new ReportParameter("Apellido", cons.Persona.Apellidos);
             ReportParameter Nombres = new ReportParameter("Nombre", cons.Persona.PrimerNombre+" "+cons.Persona.SegundoNombre);
@@ -55,7 +55,7 @@ namespace Comedor.Vista.Reportes
             ReportParameter foto = new ReportParameter("Foto", "D:/Comedor2.0/Fotos/"+cons.Persona.IdPersona+".jpg");
             ReportParameter fechaactual = new ReportParameter("fechaactual", DateTime.Now.ToString());
 
-          //  parameters.Add(path);
+            parameters.Add(path);
             parameters.Add(CodUniv);
             parameters.Add(Apellidos);
             parameters.Add(Nombres);
@@ -68,7 +68,7 @@ namespace Comedor.Vista.Reportes
             rvReporte.LocalReport.SetParameters(parameters);
             //  rvReporte.LocalReport.SubreportProcessing += DemoSubreportProcessingEventHandler;
             rvReporte.LocalReport.DataSources.Add(new ReportDataSource("DataSet3", (DataTable)reporte.Persona));
-
+            rvReporte.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", (DataTable)reporte.Incidencias));
             rvReporte.SetDisplayMode(DisplayMode.PrintLayout);
 
 
@@ -105,9 +105,21 @@ namespace Comedor.Vista.Reportes
                 {
                     filaCon["Asistencia"] = "No";
                 }
-                filaCon["Foto"] ="D:/Comedor2.0/Fotos/"+cons.Persona.IdPersona+".jpg"; 
+               // filaCon["Foto"] ="D:/Comedor2.0/Fotos/"+cons.Persona.IdPersona+".jpg"; 
                 reporte.Persona.Rows.Add(filaCon);
                 reporte.Persona.AcceptChanges();
+            }
+            i = 1;
+            foreach (Incidencia item in this.incidencias)
+            {
+                DataRow filaInc = reporte.Incidencias.NewIncidenciasRow();
+                filaInc["Numero"] = i++;
+                filaInc["Fecha"] = item.FechaHora.Date.ToString("d");
+                filaInc["Gravedad"] = item.Gravedad;
+                filaInc["Descripcion"] = item.Descripcion;
+
+                reporte.Incidencias.Rows.Add(filaInc);
+                reporte.Incidencias.AcceptChanges();
             }
         }
     }
