@@ -138,6 +138,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.dtpFechaInicio);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dtpFechaFin);
@@ -151,18 +152,20 @@
             // rbnDesdeHasta
             // 
             this.rbnDesdeHasta.AutoSize = true;
+            this.rbnDesdeHasta.BackColor = System.Drawing.Color.Transparent;
             this.rbnDesdeHasta.Location = new System.Drawing.Point(133, 27);
             this.rbnDesdeHasta.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.rbnDesdeHasta.Name = "rbnDesdeHasta";
             this.rbnDesdeHasta.Size = new System.Drawing.Size(123, 25);
             this.rbnDesdeHasta.TabIndex = 7;
             this.rbnDesdeHasta.Text = "Desdes-Hasta";
-            this.rbnDesdeHasta.UseVisualStyleBackColor = true;
+            this.rbnDesdeHasta.UseVisualStyleBackColor = false;
             this.rbnDesdeHasta.CheckedChanged += new System.EventHandler(this.rbnDesdeHasta_CheckedChanged);
             // 
             // rbnUnafecha
             // 
             this.rbnUnafecha.AutoSize = true;
+            this.rbnUnafecha.BackColor = System.Drawing.Color.Transparent;
             this.rbnUnafecha.Checked = true;
             this.rbnUnafecha.Location = new System.Drawing.Point(10, 27);
             this.rbnUnafecha.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -171,7 +174,7 @@
             this.rbnUnafecha.TabIndex = 6;
             this.rbnUnafecha.TabStop = true;
             this.rbnUnafecha.Text = "Una Fecha";
-            this.rbnUnafecha.UseVisualStyleBackColor = true;
+            this.rbnUnafecha.UseVisualStyleBackColor = false;
             this.rbnUnafecha.CheckedChanged += new System.EventHandler(this.rbnUnafecha_CheckedChanged);
             // 
             // label3
@@ -194,6 +197,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.dtpFechaUno);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(10, 52);
@@ -204,6 +208,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.panel1);
@@ -260,6 +265,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(23, 166);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -280,6 +286,7 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
+            this.lblnombre.BackColor = System.Drawing.Color.Transparent;
             this.lblnombre.Location = new System.Drawing.Point(247, 166);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(100, 21);
@@ -804,6 +811,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(709, 593);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDetalles);
@@ -818,7 +826,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmConsumoPersona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro Por Consumidor";
+            this.Text = "Reporte de Consumo";
             this.Load += new System.EventHandler(this.frmConsumoPersona_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

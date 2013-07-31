@@ -47,8 +47,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnGuardar
+            // 
+            btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnGuardar.FlatAppearance.BorderSize = 0;
+            btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnGuardar.ForeColor = System.Drawing.SystemColors.Control;
+            btnGuardar.Image = global::Comedor.Vista.Properties.Resources.base_de_datos_mini;
+            btnGuardar.Location = new System.Drawing.Point(49, 167);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            btnGuardar.Size = new System.Drawing.Size(72, 61);
+            btnGuardar.TabIndex = 7;
+            btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtDataBase);
             this.groupBox1.Controls.Add(this.txtPasswd);
             this.groupBox1.Controls.Add(this.txtUser);
@@ -129,25 +150,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Server:";
             // 
-            // btnGuardar
-            // 
-            btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnGuardar.FlatAppearance.BorderSize = 0;
-            btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnGuardar.ForeColor = System.Drawing.SystemColors.Control;
-            btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            btnGuardar.Location = new System.Drawing.Point(40, 174);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new System.Drawing.Size(66, 47);
-            btnGuardar.TabIndex = 7;
-            btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -160,7 +162,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(146, 174);
+            this.btnCancel.Location = new System.Drawing.Point(153, 174);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(69, 47);
             this.btnCancel.TabIndex = 8;
@@ -174,6 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(278, 233);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(btnGuardar);

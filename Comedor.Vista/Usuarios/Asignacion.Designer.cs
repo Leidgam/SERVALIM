@@ -69,6 +69,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
@@ -156,6 +157,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.tabPage2.Controls.Add(this.treeView2);
             this.tabPage2.Controls.Add(this.treeView1);
             this.tabPage2.Controls.Add(this.button5);
@@ -269,6 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(722, 554);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tabControl1);

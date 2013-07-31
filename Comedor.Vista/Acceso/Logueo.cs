@@ -14,7 +14,7 @@ namespace Comedor.Vista.Acceso
 {
     public partial class Logueo : Form
     {
-
+        
         #region constructor
        
         public Logueo()
@@ -80,7 +80,7 @@ namespace Comedor.Vista.Acceso
             return true;
         }
         #endregion
-
+        
         #region eventos
 
         private void btnLogueo_Click(object sender, EventArgs e)

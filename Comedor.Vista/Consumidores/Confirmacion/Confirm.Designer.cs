@@ -62,6 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(76, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 21);
@@ -71,12 +72,13 @@
             // chbAll
             // 
             this.chbAll.AutoSize = true;
+            this.chbAll.BackColor = System.Drawing.Color.Transparent;
             this.chbAll.Location = new System.Drawing.Point(12, 521);
             this.chbAll.Name = "chbAll";
             this.chbAll.Size = new System.Drawing.Size(64, 25);
             this.chbAll.TabIndex = 3;
             this.chbAll.Text = "Todo";
-            this.chbAll.UseVisualStyleBackColor = true;
+            this.chbAll.UseVisualStyleBackColor = false;
             this.chbAll.CheckedChanged += new System.EventHandler(this.chbAll_CheckedChanged);
             // 
             // btnConfirmar
@@ -93,7 +95,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Comedor.Vista.Properties.Resources.delete;
-            this.pictureBox1.Location = new System.Drawing.Point(939, 530);
+            this.pictureBox1.Location = new System.Drawing.Point(937, 533);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(23, 24);
             this.pictureBox1.TabIndex = 5;
@@ -102,6 +104,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(863, 528);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 21);
@@ -113,6 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(1039, 583);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

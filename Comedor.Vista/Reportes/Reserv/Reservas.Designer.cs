@@ -64,6 +64,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.chbOcacional);
             this.groupBox1.Controls.Add(this.chbPermanente);
@@ -366,6 +367,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(28, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 21);
@@ -387,6 +389,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(1190, 547);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);

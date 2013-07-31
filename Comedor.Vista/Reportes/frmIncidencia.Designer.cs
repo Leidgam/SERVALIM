@@ -97,6 +97,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.panel5);
@@ -394,6 +395,7 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
+            this.lblnombre.BackColor = System.Drawing.Color.Transparent;
             this.lblnombre.Location = new System.Drawing.Point(251, 174);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre.Name = "lblnombre";
@@ -414,6 +416,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(47, 174);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
@@ -446,6 +449,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(64, 579);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(112, 21);
@@ -484,6 +488,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(816, 652);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtdescripcion);
@@ -501,7 +506,7 @@
             this.MaximizeBox = false;
             this.Name = "frmIncidencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmIncidencia";
+            this.Text = "Incidencia";
             this.Load += new System.EventHandler(this.frmIncidencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).EndInit();
             this.groupBox1.ResumeLayout(false);
