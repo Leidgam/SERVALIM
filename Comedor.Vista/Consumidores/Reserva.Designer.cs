@@ -296,7 +296,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 193);
+            this.label2.Location = new System.Drawing.Point(100, 189);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 21);
@@ -343,7 +343,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(677, 719);
+            this.ClientSize = new System.Drawing.Size(660, 719);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnenviar);
             this.Controls.Add(this.label2);

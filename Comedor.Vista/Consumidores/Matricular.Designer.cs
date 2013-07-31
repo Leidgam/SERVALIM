@@ -48,6 +48,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -158,6 +159,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(25, 120);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -177,13 +179,14 @@
             // chbTodo
             // 
             this.chbTodo.AutoSize = true;
+            this.chbTodo.BackColor = System.Drawing.Color.Transparent;
             this.chbTodo.Location = new System.Drawing.Point(32, 637);
             this.chbTodo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chbTodo.Name = "chbTodo";
             this.chbTodo.Size = new System.Drawing.Size(64, 25);
             this.chbTodo.TabIndex = 4;
             this.chbTodo.Text = "Todo";
-            this.chbTodo.UseVisualStyleBackColor = true;
+            this.chbTodo.UseVisualStyleBackColor = false;
             this.chbTodo.CheckedChanged += new System.EventHandler(this.chbTodo_CheckedChanged);
             // 
             // button2
@@ -201,6 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(1138, 699);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.chbTodo);

@@ -43,6 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(18, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -94,18 +95,20 @@
             // rbnSelectTodo
             // 
             this.rbnSelectTodo.AutoSize = true;
+            this.rbnSelectTodo.BackColor = System.Drawing.Color.Transparent;
             this.rbnSelectTodo.Location = new System.Drawing.Point(27, 453);
             this.rbnSelectTodo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbnSelectTodo.Name = "rbnSelectTodo";
             this.rbnSelectTodo.Size = new System.Drawing.Size(147, 25);
             this.rbnSelectTodo.TabIndex = 5;
             this.rbnSelectTodo.Text = "Seleccionar Todo";
-            this.rbnSelectTodo.UseVisualStyleBackColor = true;
+            this.rbnSelectTodo.UseVisualStyleBackColor = false;
             this.rbnSelectTodo.CheckedChanged += new System.EventHandler(this.rbnSelectTodo_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(38, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -116,6 +119,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(332, 66);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -139,6 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(634, 503);
             this.Controls.Add(this.btnaceptar);
             this.Controls.Add(this.label3);
