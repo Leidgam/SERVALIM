@@ -123,6 +123,16 @@ namespace Comedor.Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap comida_japonesa_1600x1200 {
+            get {
+                object obj = ResourceManager.GetObject("comida_japonesa-1600x1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -246,6 +256,16 @@ namespace Comedor.Vista.Properties {
         internal static System.Drawing.Bitmap fondo_login {
             get {
                 object obj = ResourceManager.GetObject("fondo_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondochino {
+            get {
+                object obj = ResourceManager.GetObject("fondochino", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
