@@ -545,7 +545,7 @@ namespace Comedor.Control
         public List<Consumidor_Periodo> ListarGrupoAreaConsumidor(int tipo, Usuario usuario)
         {
             conexion.open();
-
+            
             String whereUsuario = "";
             if (usuario.validarPrivilegio("PRI0000034"))
             {
@@ -553,7 +553,7 @@ namespace Comedor.Control
             }
             else
             {
-                whereUsuario = "where IdUsuario='" + usuario.IdUsuario + "')";
+                whereUsuario = "where IdUsuario='" + usuario.IdUsuario +"'";
             }
             
             List<Consumidor_Periodo> ListGrupArCon = new List<Consumidor_Periodo>();
