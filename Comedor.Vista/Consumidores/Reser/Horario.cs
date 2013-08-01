@@ -202,23 +202,27 @@ namespace Comedor.Vista.Consumidores.Reservas
             {
                 if (e.ColumnIndex == 5)
                 {
+                    String idReserva = "";
                     String idTurno = dgv[0, e.RowIndex].Value.ToString();
                     opcion form = new opcion();
                     foreach (TURNO item in turnos)
                     {
-                        if (item.IdTurno.Equals(idTurno))
+                        if (item.TurnRemplazo == null) { item.TurnRemplazo = new TURNO(); }
+                        if (item.IdTurno.Equals(idTurno) || item.TurnRemplazo.IdTurno==(idTurno))
                         {
                             if (item.remplazo)
                             {
                                 if (item.bolsa) { form.recibir = 2; } else { form.recibir = 1; }
-                                
+                                idReserva = item.IdUsuarioMod;
                             }
                             else
                             {
                                 form.recibir = 0;
                             }
+                            
 
                         }
+                    
                     }
                     if (form.ShowDialog() == DialogResult.OK)
                     {
@@ -227,20 +231,29 @@ namespace Comedor.Vista.Consumidores.Reservas
                         if (anterior == 0)
                         {
                             //insertar reserva 
+                            RESERVA reserva = new RESERVA();
+                            reserva.Consumidor = this.consumidor;
+                            reserva.Turno = new TURNO();
+                            reserva.Turno.IdTurno = dgv[0,e.RowIndex].Value.ToString();
+                            reserva.TipoServicio = opcion;
+                            reserva.IdUsuario = this.usuario.IdUsuario;
+                            _mReserva.crearPermanente(reserva);
                         }
                         else
                         {
                             if (opcion == 0)
                             {
                                 //eliminar logicamente
+                                _mReserva.eliminar(idReserva);
                             }
                             else
                             {
                                 //update tipoServicio
+                                _mReserva.modificar(idReserva, opcion);
                             }
                         }
-                        
-                        
+
+                        Iniciar();
                     }
                 }
             }

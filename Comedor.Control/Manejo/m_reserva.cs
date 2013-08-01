@@ -72,13 +72,16 @@ namespace Comedor.Control
            }
            foreach (RESERVA item in reservas)
            {
+
                foreach (TURNO turn in turnos)
                {
                    if (item.Turno.IdTurno.Equals(turn.IdTurno))
                    {
+                       
                        turn.TurnRemplazo = item.Remplazo;
                        turn.remplazo = true;
-                       if (item.Tipo == 1) { turn.bolsa = false; } else { turn.bolsa = true; }
+                       if (item.TipoServicio == 1) { turn.bolsa = false; } else { turn.bolsa = true; }
+                       turn.IdUsuarioMod = item.IdReserva;
                    }
                }
            }
@@ -657,6 +660,40 @@ namespace Comedor.Control
            }
            conexion.close();
            return reservas;
+       }
+
+       public void crearPermanente(RESERVA reserva)
+       {
+           conexion.open();
+
+           SqlCommand scmd = new SqlCommand("crear_Permanente", conexion.get());
+           scmd.CommandType = CommandType.StoredProcedure;
+
+           scmd.Parameters.AddWithValue("@IdConsumidor", reserva.Consumidor.IdConsumidor);
+           scmd.Parameters.AddWithValue("@IdTurno", reserva.Turno.IdTurno);
+           scmd.Parameters.AddWithValue("@tiposervico", reserva.TipoServicio);
+           scmd.Parameters.AddWithValue("@IdUsuario", reserva.IdUsuario);
+
+           scmd.ExecuteNonQuery();
+           conexion.close();
+       }
+
+       public void eliminar(String idReserva)
+       {
+           conexion.open();
+           string query2 = "UPDATE Reserva SET ESTADO=0 WHERE IdReserva='" + idReserva + "'";
+           SqlCommand queryCommand2 = new SqlCommand(query2, conexion.get());
+           queryCommand2.ExecuteNonQuery();
+           conexion.close();
+       }
+
+       public void modificar(String idReserva, int tipoServicio)
+       {
+           conexion.open();
+           string query2 = "UPDATE Reserva SET tipoServicio="+tipoServicio+" WHERE IdReserva='" + idReserva + "'";
+           SqlCommand queryCommand2 = new SqlCommand(query2, conexion.get());
+           queryCommand2.ExecuteNonQuery();
+           conexion.close();
        }
     }
 }
