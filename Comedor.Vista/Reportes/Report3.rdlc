@@ -1017,7 +1017,7 @@
         <Top>9.94516cm</Top>
         <Left>1.06512cm</Left>
         <Height>1.2cm</Height>
-        <Width>13.91934cm</Width>
+        <Width>13.91933cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -1047,7 +1047,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>INSIDENCIAS REPORTADAS</Value>
+                <Value>INCIDENCIAS REPORTADAS</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                   <TextDecoration>Underline</TextDecoration>

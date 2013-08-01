@@ -223,7 +223,24 @@ namespace Comedor.Vista.Consumidores.Reservas
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         int opcion = form.getOpcion();
-                        MessageBox.Show(opcion.ToString());
+                        int anterior = form.recibir;
+                        if (anterior == 0)
+                        {
+                            //insertar reserva 
+                        }
+                        else
+                        {
+                            if (opcion == 0)
+                            {
+                                //eliminar logicamente
+                            }
+                            else
+                            {
+                                //update tipoServicio
+                            }
+                        }
+                        
+                        
                     }
                 }
             }
@@ -280,6 +297,11 @@ namespace Comedor.Vista.Consumidores.Reservas
         private void dgvHorarioSabado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             clickCelda(e, dgvHorarioSabado);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

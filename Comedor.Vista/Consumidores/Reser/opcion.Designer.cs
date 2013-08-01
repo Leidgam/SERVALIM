@@ -65,6 +65,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "opcion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opción";
             this.Load += new System.EventHandler(this.opcion_Load);
             this.ResumeLayout(false);
