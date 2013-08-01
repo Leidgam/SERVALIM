@@ -31,9 +31,9 @@ namespace Comedor.Control
             SqlDataAdapter cmdAdd = new SqlDataAdapter("agregar_consumidor", conexion.get());
             cmdAdd.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-            cmdAdd.SelectCommand.Parameters.AddWithValue("@Primernombre", c.Persona.PrimerNombre);
-            cmdAdd.SelectCommand.Parameters.AddWithValue("@Segundonombre ", c.Persona.SegundoNombre);
-            cmdAdd.SelectCommand.Parameters.AddWithValue("@apellido", c.Persona.Apellidos);
+            cmdAdd.SelectCommand.Parameters.AddWithValue("@Nombres", c.Persona.Nombres);
+            cmdAdd.SelectCommand.Parameters.AddWithValue("@Paterno ", c.Persona.Paterno);
+            cmdAdd.SelectCommand.Parameters.AddWithValue("@Materno", c.Persona.Materno);
             cmdAdd.SelectCommand.Parameters.AddWithValue("@TipoDNI", c.Persona.TipoDNI);
             cmdAdd.SelectCommand.Parameters.AddWithValue("@DNI", c.Persona.DNI);
             cmdAdd.SelectCommand.Parameters.AddWithValue("@FechaNac", c.Persona.FechaNac);
@@ -70,6 +70,7 @@ namespace Comedor.Control
 
                 queryCommand2.ExecuteNonQuery();
             }
+            bool autoasignnn = false;
             if (c.periodos.Count > 0)
             {
                 String query = "insert into CONSUMIDOR_PERIODO values ";
@@ -78,16 +79,21 @@ namespace Comedor.Control
                 {
                     if (item.AutoAsig == false)
                     {
+                        autoasignnn = true;
                         if (primera == false) { query += " , "; } else { primera = false; }    
                         query += "('" + idConsumidor + "','" + item.Periodo.IdPeriodo + "','" + item.Codigo + "'," + item.Contrato+ ",1,'" + c.IdUsuarioReg + "',GETDATE(),NULL,NULL )";
                     }
                 }
-                SqlCommand queryCommand2 = new SqlCommand(query, conexion.get());
+                if (autoasignnn)
+                {
+                    SqlCommand queryCommand2 = new SqlCommand(query, conexion.get());
 
-                queryCommand2.ExecuteNonQuery();
+                    queryCommand2.ExecuteNonQuery();
+                }
             }
             if (c.periodos.Count > 0)
             {
+                if (c.IdConsumidor == "" || c.IdConsumidor == null) { c.IdConsumidor = idConsumidor; }
                 List<consumidor> lista = new List<consumidor>();
                 lista.Add(c);
                 foreach (Consumidor_Periodo item in c.periodos)
@@ -112,7 +118,7 @@ namespace Comedor.Control
             conexion.open();
             List<consumidor> consumidores = new List<consumidor>();
             // Create a String to hold the query.
-            string query = "SELECT CONSUMIDOR.IdConsumidor, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, CONSUMIDOR_PERIODO.Codigo FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN CONSUMIDOR_PERIODO ON CONSUMIDOR.IdConsumidor = CONSUMIDOR_PERIODO.IdConsumidor WHERE        (CONSUMIDOR.estado <> 0) AND (CONSUMIDOR_PERIODO.IdPeriodo = N'" + idPeriodo + "') AND (CONSUMIDOR.IdGrupo = N'" + idGrupo + "') AND (CONSUMIDOR_PERIODO.estado <> 0)";
+            string query = "SELECT CONSUMIDOR.IdConsumidor, Persona.Nombres, Persona.Paterno, Persona.Materno, CONSUMIDOR_PERIODO.Codigo FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN CONSUMIDOR_PERIODO ON CONSUMIDOR.IdConsumidor = CONSUMIDOR_PERIODO.IdConsumidor WHERE        (CONSUMIDOR.estado <> 0) AND (CONSUMIDOR_PERIODO.IdPeriodo = N'" + idPeriodo + "') AND (CONSUMIDOR.IdGrupo = N'" + idGrupo + "') AND (CONSUMIDOR_PERIODO.estado <> 0)";
 
             // Create a SqlCommand object and pass the constructor the connection string and the query string.
             SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -131,9 +137,9 @@ namespace Comedor.Control
                 consumidor c = new consumidor();
                 c.IdConsumidor = item[0].ToString();
                 c.Persona = new Persona();
-                c.Persona.PrimerNombre = item[1].ToString();
-                c.Persona.SegundoNombre = item[2].ToString();
-                c.Persona.Apellidos = item[3].ToString();
+                c.Persona.Nombres = item[1].ToString();
+                c.Persona.Paterno = item[2].ToString();
+                c.Persona.Materno = item[3].ToString();
                 Periodo periodo = new Periodo();
                 periodo.IdPeriodo = idPeriodo;
                 Consumidor_Periodo cp = new Consumidor_Periodo();
@@ -159,11 +165,11 @@ namespace Comedor.Control
             if (idPeriodo != "000")
             {
                 wherePeriodo = "AND (CONSUMIDOR_PERIODO.IdPeriodo = N'" + idPeriodo + "')";
-                query = "SELECT CONSUMIDOR.IdConsumidor, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, CONSUMIDOR_PERIODO.Codigo, Area.Nombre, Persona.IdPersona FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN CONSUMIDOR_PERIODO ON CONSUMIDOR.IdConsumidor = CONSUMIDOR_PERIODO.IdConsumidor INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea WHERE (CONSUMIDOR.estado <> 0)  AND (CONSUMIDOR_PERIODO.estado <> 0) " + wherePeriodo;           
+                query = "SELECT CONSUMIDOR.IdConsumidor, Persona.Nombres, Persona.Paterno, Persona.Materno, CONSUMIDOR_PERIODO.Codigo, Area.Nombre, Persona.IdPersona FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN CONSUMIDOR_PERIODO ON CONSUMIDOR.IdConsumidor = CONSUMIDOR_PERIODO.IdConsumidor INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea WHERE (CONSUMIDOR.estado <> 0)  AND (CONSUMIDOR_PERIODO.estado <> 0) " + wherePeriodo;           
             }
             else
             {
-                query = "SELECT CONSUMIDOR.IdConsumidor, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos,'', Area.Nombre, Persona.IdPersona FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea WHERE (CONSUMIDOR.estado <> 0)";
+                query = "SELECT CONSUMIDOR.IdConsumidor, Persona.Nombres, Persona.Paterno, Persona.Materno,'', Area.Nombre, Persona.IdPersona FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea WHERE (CONSUMIDOR.estado <> 0)";
             }
 
             // Create a String to hold the query.
@@ -186,9 +192,9 @@ namespace Comedor.Control
                 consumidor c = new consumidor();
                 c.IdConsumidor = item[0].ToString();
                 c.Persona = new Persona();
-                c.Persona.PrimerNombre = item[1].ToString();
-                c.Persona.SegundoNombre = item[2].ToString();
-                c.Persona.Apellidos = item[3].ToString();
+                c.Persona.Nombres = item[1].ToString();
+                c.Persona.Paterno = item[2].ToString();
+                c.Persona.Materno = item[3].ToString();
                 Periodo periodo = new Periodo();
                 periodo.IdPeriodo = idPeriodo;
                 Consumidor_Periodo cp = new Consumidor_Periodo();
@@ -217,7 +223,7 @@ namespace Comedor.Control
             String whereArea = "";
             if (idArea != "000") { whereArea = " AND (CONSUMIDOR.IdArea = N'" + idArea + "')"; }
 
-            string query = "SELECT CONSUMIDOR.IdConsumidor, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, CONSUMIDOR_PERIODO.Codigo, GRUPO.Nombre, Area.Nombre AS Expr1 FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN CONSUMIDOR_PERIODO ON CONSUMIDOR.IdConsumidor = CONSUMIDOR_PERIODO.IdConsumidor INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea WHERE (CONSUMIDOR.estado <> 0) AND (CONSUMIDOR_PERIODO.IdPeriodo = N'" + idPeriodo + "') AND (CONSUMIDOR_PERIODO.estado <> 0) " + whereGrupo + " " + whereArea;
+            string query = "SELECT CONSUMIDOR.IdConsumidor, Persona.Nombres, Persona.Paterno, Persona.Materno, CONSUMIDOR_PERIODO.Codigo, GRUPO.Nombre, Area.Nombre AS Expr1 FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN CONSUMIDOR_PERIODO ON CONSUMIDOR.IdConsumidor = CONSUMIDOR_PERIODO.IdConsumidor INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea WHERE (CONSUMIDOR.estado <> 0) AND (CONSUMIDOR_PERIODO.IdPeriodo = N'" + idPeriodo + "') AND (CONSUMIDOR_PERIODO.estado <> 0) " + whereGrupo + " " + whereArea;
             // Create a SqlCommand object and pass the constructor the connection string and the query string.
             SqlCommand queryCommand = new SqlCommand(query, conexion.get());
 
@@ -235,9 +241,9 @@ namespace Comedor.Control
                 consumidor c = new consumidor();
                 c.IdConsumidor = item[0].ToString();
                 c.Persona = new Persona();
-                c.Persona.PrimerNombre = item[1].ToString();
-                c.Persona.SegundoNombre = item[2].ToString();
-                c.Persona.Apellidos = item[3].ToString();
+                c.Persona.Nombres = item[1].ToString();
+                c.Persona.Paterno = item[2].ToString();
+                c.Persona.Materno = item[3].ToString();
                 Periodo periodo = new Periodo();
                 periodo.IdPeriodo = idPeriodo;
                 Consumidor_Periodo cp = new Consumidor_Periodo();
@@ -339,7 +345,7 @@ namespace Comedor.Control
             conexion.open();
             consumidor consumidore = new consumidor();
             // Create a String to hold the query.
-            string query = "SELECT CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, Persona.TipoDNI, Persona.DNI, Persona.fechaNac, Persona.IdPais, Persona.IdDepartamento, Persona.Distrito, CONSUMIDOR.estado, CONSUMIDOR.IdEAP, CONSUMIDOR.Ciclo, CONSUMIDOR.CodUniversitario, CONSUMIDOR.IdGrupo, CONSUMIDOR.IdArea FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona WHERE (CONSUMIDOR.estado <> 0) AND (CONSUMIDOR.IdConsumidor = N'"+idConsumidor+"') ";
+            string query = "SELECT CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.Nombres, Persona.Paterno, Persona.Materno, Persona.TipoDNI, Persona.DNI, Persona.fechaNac, Persona.IdPais, Persona.IdDepartamento, Persona.Distrito, CONSUMIDOR.estado, CONSUMIDOR.IdEAP, CONSUMIDOR.Ciclo, CONSUMIDOR.CodUniversitario, CONSUMIDOR.IdGrupo, CONSUMIDOR.IdArea FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona WHERE (CONSUMIDOR.estado <> 0) AND (CONSUMIDOR.IdConsumidor = N'"+idConsumidor+"') ";
 
             // Create a SqlCommand object and pass the constructor the connection string and the query string.
             SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -359,9 +365,9 @@ namespace Comedor.Control
                 c.IdConsumidor = item[0].ToString();
                 c.Persona = new Persona();
                 c.Persona.IdPersona = item[1].ToString();
-                c.Persona.PrimerNombre = item[2].ToString();
-                c.Persona.SegundoNombre = item[3].ToString();
-                c.Persona.Apellidos = item[4].ToString();
+                c.Persona.Nombres = item[2].ToString();
+                c.Persona.Paterno = item[3].ToString();
+                c.Persona.Materno = item[4].ToString();
                 c.Persona.TipoDNI = int.Parse(item[5].ToString());
                 c.Persona.DNI = item[6].ToString();
                 c.Persona.FechaNac = DateTime.Parse(item[7].ToString());
@@ -462,7 +468,7 @@ namespace Comedor.Control
         public void Editar(consumidor c)
         {
             conexion.open();
-            string query = "update Persona set PrimerNombre ='"+c.Persona.PrimerNombre+"', SegundoNombre='"+c.Persona.SegundoNombre+"', Apellidos='"+c.Persona.Apellidos+"', TipoDNI="+c.Persona.TipoDNI+", DNI='"+c.Persona.DNI+"',fechaNac='"+c.Persona.FechaNac.ToString("dd/MM/yyyy")+"',IdPais='"+c.Persona.Pais.IdPais+"',IdDepartamento='"+c.Persona.Departamento.IdDepartamento+"',Distrito='"+c.Persona.Distrito+"',idUsuarioMod='"+c.IdUsuarioMod+"', fechaMod = GETDATE() where IdPersona ='"+c.Persona.IdPersona+"'";
+            string query = "update Persona set Nombres ='"+c.Persona.Nombres+"', Paterno='"+c.Persona.Paterno+"', Materno='"+c.Persona.Materno+"', TipoDNI="+c.Persona.TipoDNI+", DNI='"+c.Persona.DNI+"',fechaNac='"+c.Persona.FechaNac.ToString("dd/MM/yyyy")+"',IdPais='"+c.Persona.Pais.IdPais+"',IdDepartamento='"+c.Persona.Departamento.IdDepartamento+"',Distrito='"+c.Persona.Distrito+"',idUsuarioMod='"+c.IdUsuarioMod+"', fechaMod = GETDATE() where IdPersona ='"+c.Persona.IdPersona+"'";
             SqlCommand queryCommand = new SqlCommand(query, conexion.get());
             queryCommand.ExecuteNonQuery();
 
@@ -561,7 +567,7 @@ namespace Comedor.Control
 
             if (tipo == 1) { GrupoAreaConsumidor = " c.IdGrupo, g.Nombre"; }
             if (tipo == 2) { GrupoAreaConsumidor = " f.IdArea, e.Nombre"; }
-            if (tipo == 3) { GrupoAreaConsumidor = " a.Codigo,a.IdConsumidor,d.PrimerNombre,d.SegundoNombre,d.Apellidos,e.IdArea, c.IdGrupo "; }
+            if (tipo == 3) { GrupoAreaConsumidor = " a.Codigo,a.IdConsumidor,d.Nombres,d.Paterno,d.Materno,e.IdArea, c.IdGrupo "; }
 
             string query = "select DISTINCT" + GrupoAreaConsumidor + " from  CONSUMIDOR_PERIODO a, PERIODO b , CONSUMIDOR c, Persona d, Area e, PERSONA_AREA f, GRUPO g"
                      + " where a.IdPeriodo=b.IdPeriodo"
@@ -605,9 +611,9 @@ namespace Comedor.Control
                     ga.Consumidor = new consumidor();
                     ga.Consumidor.IdConsumidor = item[1].ToString();
                     ga.Consumidor.Persona = new Persona();
-                    ga.Consumidor.Persona.PrimerNombre = item[2].ToString();
-                    ga.Consumidor.Persona.SegundoNombre = item[3].ToString();
-                    ga.Consumidor.Persona.Apellidos = item[4].ToString();
+                    ga.Consumidor.Persona.Nombres = item[2].ToString();
+                    ga.Consumidor.Persona.Paterno = item[3].ToString();
+                    ga.Consumidor.Persona.Materno = item[4].ToString();
                     ga.Consumidor.Area = new Area();
                     ga.Consumidor.Area.IdArea = item[5].ToString();
                     ga.Consumidor.Grupo = new Grupo();
@@ -697,7 +703,7 @@ namespace Comedor.Control
             if (idciclo != 0) { ciclo = " and a.Ciclo=" + idciclo; }
 
             conexion.open();
-            string query = "select a.IdConsumidor, b.Codigo, c.PrimerNombre, c.SegundoNombre, c.Apellidos, a.CodUniversitario from Persona c, CONSUMIDOR a, CONSUMIDOR_PERIODO b " + tablaRE + " where a.IdConsumidor=b.IdConsumidor and c.IdPersona=a.IdPersona " + RegistroEntra + periodo + area + grupo + facultad + escuela + ciclo + " and  a.estado<>0  and b.estado<>0 order by c.Apellidos";
+            string query = "select a.IdConsumidor, b.Codigo, c.Nombres, c.Paterno, c.Materno, a.CodUniversitario from Persona c, CONSUMIDOR a, CONSUMIDOR_PERIODO b " + tablaRE + " where a.IdConsumidor=b.IdConsumidor and c.IdPersona=a.IdPersona " + RegistroEntra + periodo + area + grupo + facultad + escuela + ciclo + " and  a.estado<>0  and b.estado<>0 order by c.Materno";
 
             SqlCommand queryCommand = new SqlCommand(query, conexion.get());
             SqlDataReader queryCommandReader = queryCommand.ExecuteReader();
@@ -713,9 +719,9 @@ namespace Comedor.Control
                 cp.Consumidor.IdConsumidor = item[0].ToString();
                 cp.Codigo = item[1].ToString();
                 cp.Consumidor.Persona = new Persona();
-                cp.Consumidor.Persona.PrimerNombre = item[2].ToString();
-                cp.Consumidor.Persona.SegundoNombre = item[3].ToString();
-                cp.Consumidor.Persona.Apellidos = item[4].ToString();
+                cp.Consumidor.Persona.Nombres = item[2].ToString();
+                cp.Consumidor.Persona.Paterno = item[3].ToString();
+                cp.Consumidor.Persona.Materno = item[4].ToString();
                 cp.Consumidor.CodUniversitario = item[5].ToString();
 
                 resp.Add(cp);
@@ -839,7 +845,7 @@ namespace Comedor.Control
 
             consumidor ca = new consumidor();
 
-            string query = "select a.IdPersona, b.PrimerNombre, b.SegundoNombre, b.Apellidos, b.foto, a.IdGrupo, c.Nombre, a.IdArea, d.Nombre, e.Nombre, f.Nombre, a.CodUniversitario from CONSUMIDOR a, Persona b, GRUPO c, Area d,EAP e, Facultad f where a.IdPersona=b.IdPersona and a.IdGrupo=c.IdGrupo and a.IdArea=d.IdArea and a.IdEAP=e.IdEAP and e.IdFacultad=f.IdFacultad and a.IdConsumidor='" + idconsumidor + "'";
+            string query = "select a.IdPersona, b.Nombres, b.Paterno, b.Materno, b.foto, a.IdGrupo, c.Nombre, a.IdArea, d.Nombre, e.Nombre, f.Nombre, a.CodUniversitario from CONSUMIDOR a, Persona b, GRUPO c, Area d,EAP e, Facultad f where a.IdPersona=b.IdPersona and a.IdGrupo=c.IdGrupo and a.IdArea=d.IdArea and a.IdEAP=e.IdEAP and e.IdFacultad=f.IdFacultad and a.IdConsumidor='" + idconsumidor + "'";
 
             SqlCommand queryCommand = new SqlCommand(query, conexion.get());
             SqlDataReader queryCommandReader = queryCommand.ExecuteReader();
@@ -853,9 +859,9 @@ namespace Comedor.Control
                 ca.IdConsumidor = idconsumidor;
                 ca.Persona = new Persona();
                 ca.Persona.IdPersona = item[0].ToString();
-                ca.Persona.PrimerNombre = item[1].ToString();
-                ca.Persona.SegundoNombre = item[2].ToString();
-                ca.Persona.Apellidos = item[3].ToString();
+                ca.Persona.Nombres = item[1].ToString();
+                ca.Persona.Paterno = item[2].ToString();
+                ca.Persona.Materno = item[3].ToString();
                 ca.Grupo = new Grupo();
                 ca.Grupo.IdGrupo = item[5].ToString();
                 ca.Grupo.Nombre = item[6].ToString();
@@ -895,7 +901,7 @@ namespace Comedor.Control
             if (tipoG == 1) { if (gravedad1 != 0) { wheregravedad = " and a.gravedad=" + gravedad1; } }
             if (tipoG == 2) { wheregravedad = " and a.gravedad>=" + gravedad1 + " and a.gravedad<=" + gravedad2; }
 
-            string query = "select distinct(a.IdIncidencia),a.IdConsumidor, d.Codigo, c.PrimerNombre, c.SegundoNombre, c.Apellidos, a.gravedad, CONVERT(date ,a.fechaHora), a.IdTurno, a.Descripción, a.tipo "
+            string query = "select distinct(a.IdIncidencia),a.IdConsumidor, d.Codigo, c.Nombres, c.Paterno, c.Materno, a.gravedad, CONVERT(date ,a.fechaHora), a.IdTurno, a.Descripción, a.tipo "
                            + " from Incidencia a, CONSUMIDOR b, Persona c, CONSUMIDOR_PERIODO d , PERIODO e"
                            + " where a.IdConsumidor=b.IdConsumidor and b.IdPersona= c.IdPersona and b.IdConsumidor=d.IdConsumidor and a.estado<>0" + wherefecha + wheregravedad
                            + " and d.IdPeriodo=e.IdPeriodo and CONVERT(date,e.fechaInicio)<=CONVERT(date,SYSDATETIME()) and CONVERT(date,e.fechaFin)>=CONVERT(date,SYSDATETIME())";
@@ -913,9 +919,9 @@ namespace Comedor.Control
                 i.Consumidor.IdConsumidor = item[1].ToString();
                 i.Consumidor.CodUniversitario = item[2].ToString(); //codigo comedor
                 i.Consumidor.Persona = new Persona();
-                i.Consumidor.Persona.PrimerNombre = item[3].ToString();
-                i.Consumidor.Persona.SegundoNombre = item[4].ToString();
-                i.Consumidor.Persona.Apellidos = item[5].ToString();
+                i.Consumidor.Persona.Nombres = item[3].ToString();
+                i.Consumidor.Persona.Paterno = item[4].ToString();
+                i.Consumidor.Persona.Materno = item[5].ToString();
                 i.Gravedad = int.Parse(item[6].ToString());
                 i.FechaHora = DateTime.Parse(item[7].ToString());
                 i.IdTurno = item[8].ToString();

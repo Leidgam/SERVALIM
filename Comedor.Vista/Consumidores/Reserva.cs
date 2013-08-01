@@ -117,9 +117,9 @@ namespace Comedor.Vista.Consumidores
                     cp.Consumidor.IdConsumidor = item1.Consumidor.IdConsumidor;
                     cp.Codigo = item1.Codigo;
                     cp.Consumidor.Persona = new Persona();
-                    cp.Consumidor.Persona.PrimerNombre = item1.Consumidor.Persona.PrimerNombre;
-                    cp.Consumidor.Persona.SegundoNombre = item1.Consumidor.Persona.SegundoNombre;
-                    cp.Consumidor.Persona.Apellidos = item1.Consumidor.Persona.Apellidos;
+                    cp.Consumidor.Persona.Nombres = item1.Consumidor.Persona.Nombres;
+                    cp.Consumidor.Persona.Paterno = item1.Consumidor.Persona.Paterno;
+                    cp.Consumidor.Persona.Materno = item1.Consumidor.Persona.Materno;
                     cp.Consumidor.Area = new Area();
                     cp.Consumidor.Area.IdArea = item1.Consumidor.Area.IdArea;
                     cp.Consumidor.Grupo = new Grupo();
@@ -151,9 +151,9 @@ namespace Comedor.Vista.Consumidores
                         cp.Consumidor.IdConsumidor = item3.Consumidor.IdConsumidor;
                         cp.Codigo = item3.Codigo;
                         cp.Consumidor.Persona = new Persona();
-                        cp.Consumidor.Persona.PrimerNombre = item3.Consumidor.Persona.PrimerNombre;
-                        cp.Consumidor.Persona.SegundoNombre = item3.Consumidor.Persona.SegundoNombre;
-                        cp.Consumidor.Persona.Apellidos = item3.Consumidor.Persona.Apellidos;
+                        cp.Consumidor.Persona.Nombres = item3.Consumidor.Persona.Nombres;
+                        cp.Consumidor.Persona.Paterno = item3.Consumidor.Persona.Paterno;
+                        cp.Consumidor.Persona.Materno = item3.Consumidor.Persona.Materno;
                         ListReserva.Add(cp);
                     }
                 }
@@ -173,8 +173,8 @@ namespace Comedor.Vista.Consumidores
                 int n = dgvReserva.Rows.Add();
                 dgvReserva.Rows[n].Cells[0].Value = item.Consumidor.IdConsumidor;
                 dgvReserva.Rows[n].Cells[1].Value = item.Codigo;
-                dgvReserva.Rows[n].Cells[2].Value = item.Consumidor.Persona.Apellidos;
-                dgvReserva.Rows[n].Cells[3].Value = item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre;
+                dgvReserva.Rows[n].Cells[2].Value = item.Consumidor.Persona.Paterno + " " + item.Consumidor.Persona.Materno;
+                dgvReserva.Rows[n].Cells[3].Value = item.Consumidor.Persona.Nombres ;
             }
             dgvReserva.RowHeadersVisible = false;
         }

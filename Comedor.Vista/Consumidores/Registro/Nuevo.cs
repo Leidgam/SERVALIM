@@ -406,9 +406,9 @@ namespace Comedor.Vista.Consumidores
         {
             if (ValidarPersona())
             {
-                persona.PrimerNombre = txtPrimerNombre.Text;
-                persona.SegundoNombre = txtSegNombre.Text;
-                persona.Apellidos = txtApellidos.Text;
+                persona.Nombres = txtNombres.Text;
+                persona.Paterno = txtSegNombre.Text;
+                persona.Materno = txtMaterno.Text;
                 persona.TipoDNI = cmbDni.SelectedIndex + 1;
                 persona.DNI = txtDni.Text;
                 persona.Pais = (Pais)cmbPais.SelectedItem;
@@ -466,9 +466,9 @@ namespace Comedor.Vista.Consumidores
         {
             if (ValidarPersona())
             {
-                persona.PrimerNombre = txtPrimerNombre.Text;
-                persona.SegundoNombre = txtSegNombre.Text;
-                persona.Apellidos = txtApellidos.Text;
+                persona.Nombres = txtNombres.Text;
+                persona.Paterno = txtSegNombre.Text;
+                persona.Materno = txtMaterno.Text;
                 persona.TipoDNI = cmbDni.SelectedIndex + 1;
                 persona.DNI = txtDni.Text;
                 persona.Pais = (Pais)cmbPais.SelectedItem;
@@ -522,14 +522,14 @@ namespace Comedor.Vista.Consumidores
         {
             errorProvider1.Clear();
             bool ok = true;
-            if (txtPrimerNombre.Text == "")
+            if (txtNombres.Text == "")
             {
-                errorProvider1.SetError(txtPrimerNombre, "Ingrese el Primer Nombre");
+                errorProvider1.SetError(txtNombres, "Ingrese el Primer Nombre");
                 ok = false;
             }
-            if (txtApellidos.Text == "")
+            if (txtMaterno.Text == "")
             {
-                errorProvider1.SetError(txtApellidos, "Ingrese los Apellidos");
+                errorProvider1.SetError(txtMaterno, "Ingrese los Materno");
                 ok = false;
             }
 
@@ -591,9 +591,9 @@ namespace Comedor.Vista.Consumidores
         private void cargarDatos()
         {
             //Datos persona
-            txtPrimerNombre.Text = persona.PrimerNombre;
-            txtSegNombre.Text = persona.SegundoNombre;
-            txtApellidos.Text = persona.Apellidos;
+            txtNombres.Text = persona.Nombres;
+            txtSegNombre.Text = persona.Paterno;
+            txtMaterno.Text = persona.Materno;
             cmbDni.SelectedIndex = persona.TipoDNI - 1;
             txtDni.Text = persona.DNI;
             foreach (Pais item in cmbPais.Items)
@@ -674,9 +674,9 @@ namespace Comedor.Vista.Consumidores
         private void cargarDatosUsuario()
         {
             //Datos persona
-            txtPrimerNombre.Text = persona.PrimerNombre;
-            txtSegNombre.Text = persona.SegundoNombre;
-            txtApellidos.Text = persona.Apellidos;
+            txtNombres.Text = persona.Nombres;
+            txtSegNombre.Text = persona.Paterno;
+            txtMaterno.Text = persona.Materno;
             cmbDni.SelectedIndex = persona.TipoDNI - 1;
             txtDni.Text = persona.DNI;
             foreach (Pais item in cmbPais.Items)

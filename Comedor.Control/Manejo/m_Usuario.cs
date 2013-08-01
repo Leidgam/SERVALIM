@@ -22,7 +22,7 @@ namespace Comedor.Control
         {
             conexion.open();
             // Create a String to hold the query.
-            string query = "SELECT        Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, USUARIO.IdUsuario FROM            USUARIO INNER JOIN                         Persona ON USUARIO.IdPersona = Persona.IdPersona WHERE        (USUARIO.estado <> 0) AND (USUARIO.login = N'"+user.Login+"') AND (USUARIO.passw = N'"+user.Passw+"')";
+            string query = "SELECT        Persona.Nombres, Persona.Paterno, Persona.Materno, USUARIO.IdUsuario FROM            USUARIO INNER JOIN                         Persona ON USUARIO.IdPersona = Persona.IdPersona WHERE        (USUARIO.estado <> 0) AND (USUARIO.login = N'"+user.Login+"') AND (USUARIO.passw = N'"+user.Passw+"')";
 
             // Create a SqlCommand object and pass the constructor the connection string and the query string.
             SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -41,13 +41,13 @@ namespace Comedor.Control
                 Usuario u = new Usuario();
                 u.Login = user.Login;
                 u.Persona = new Persona();
-                u.Persona.PrimerNombre = item[0].ToString();
-                u.Persona.SegundoNombre = item[1].ToString();
-                u.Persona.Apellidos = item[2].ToString();
+                u.Persona.Nombres = item[0].ToString();
+                u.Persona.Paterno = item[1].ToString();
+                u.Persona.Materno = item[2].ToString();
                 u.IdUsuario = item[3].ToString();
 
                 //Obtener privileios
-                String consulta = "SELECT        USUARIO.IdUsuario, ROL.IdRol, ROL.Titulo, PRIVILEGIO.IdPrivilegio, PRIVILEGIO.Titulo AS Expr1, PRIVILEGIO.IdPrivilegioSup, PRIVILEGIO.estado AS Expr2,                          Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos FROM            PRIVILEGIO INNER JOIN                         ROL_PRIVILEGIO ON PRIVILEGIO.IdPrivilegio = ROL_PRIVILEGIO.IdPrivilegio INNER JOIN                         ROL ON ROL_PRIVILEGIO.IdRol = ROL.IdRol INNER JOIN                         USUARIO_ROL ON ROL.IdRol = USUARIO_ROL.IdRol INNER JOIN                         USUARIO ON USUARIO_ROL.IdUsuario = USUARIO.IdUsuario INNER JOIN                         Persona ON USUARIO.IdPersona = Persona.IdPersona WHERE        (USUARIO.IdUsuario = N'"+u.IdUsuario+"') AND (ROL.estado <> 0) AND (PRIVILEGIO.estado <> 0)";
+                String consulta = "SELECT        USUARIO.IdUsuario, ROL.IdRol, ROL.Titulo, PRIVILEGIO.IdPrivilegio, PRIVILEGIO.Titulo AS Expr1, PRIVILEGIO.IdPrivilegioSup, PRIVILEGIO.estado AS Expr2,                          Persona.Nombres, Persona.Paterno, Persona.Materno FROM            PRIVILEGIO INNER JOIN                         ROL_PRIVILEGIO ON PRIVILEGIO.IdPrivilegio = ROL_PRIVILEGIO.IdPrivilegio INNER JOIN                         ROL ON ROL_PRIVILEGIO.IdRol = ROL.IdRol INNER JOIN                         USUARIO_ROL ON ROL.IdRol = USUARIO_ROL.IdRol INNER JOIN                         USUARIO ON USUARIO_ROL.IdUsuario = USUARIO.IdUsuario INNER JOIN                         Persona ON USUARIO.IdPersona = Persona.IdPersona WHERE        (USUARIO.IdUsuario = N'"+u.IdUsuario+"') AND (ROL.estado <> 0) AND (PRIVILEGIO.estado <> 0)";
 
                 SqlCommand peticion = new SqlCommand(consulta, conexion.get());
                 SqlDataReader consultacommanReader = peticion.ExecuteReader();
@@ -101,7 +101,7 @@ namespace Comedor.Control
        {
            conexion.open();
            // Create a String to hold the query.
-           string query = "SELECT USUARIO.IdUsuario, USUARIO.login, Persona.IdPersona, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos FROM            USUARIO INNER JOIN                          Persona ON USUARIO.IdPersona = Persona.IdPersona WHERE        (USUARIO.estado <> 0)";
+           string query = "SELECT USUARIO.IdUsuario, USUARIO.login, Persona.IdPersona, Persona.Nombres, Persona.Paterno, Persona.Materno FROM            USUARIO INNER JOIN                          Persona ON USUARIO.IdPersona = Persona.IdPersona WHERE        (USUARIO.estado <> 0)";
            List<Usuario> usuarios = new List<Usuario>();
            // Create a SqlCommand object and pass the constructor the connection string and the query string.
            SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -122,9 +122,9 @@ namespace Comedor.Control
                u.Login = item[1].ToString();
                u.Persona = new Persona();
                u.Persona.IdPersona = item[2].ToString();
-               u.Persona.PrimerNombre = item[3].ToString();
-               u.Persona.SegundoNombre = item[4].ToString();
-               u.Persona.Apellidos = item[5].ToString();
+               u.Persona.Nombres = item[3].ToString();
+               u.Persona.Paterno = item[4].ToString();
+               u.Persona.Materno = item[5].ToString();
 
                //Obtener privileios
                String consulta = "SELECT ROL.IdRol, ROL.Titulo FROM  USUARIO_ROL INNER JOIN ROL ON USUARIO_ROL.IdRol = ROL.IdRol WHERE        (USUARIO_ROL.IdUsuario = N'"+u.IdUsuario+"') AND (ROL.estado <> 0)";
@@ -201,9 +201,9 @@ namespace Comedor.Control
            SqlDataAdapter cmdAdd = new SqlDataAdapter("agregar_usuario", conexion.get());
            cmdAdd.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-           cmdAdd.SelectCommand.Parameters.AddWithValue("@Primernombre", u.Persona.PrimerNombre);
-           cmdAdd.SelectCommand.Parameters.AddWithValue("@Segundonombre ", u.Persona.SegundoNombre);
-           cmdAdd.SelectCommand.Parameters.AddWithValue("@apellido", u.Persona.Apellidos);
+           cmdAdd.SelectCommand.Parameters.AddWithValue("@Nombres", u.Persona.Nombres);
+           cmdAdd.SelectCommand.Parameters.AddWithValue("@Paterno ", u.Persona.Paterno);
+           cmdAdd.SelectCommand.Parameters.AddWithValue("@apellido", u.Persona.Materno);
            cmdAdd.SelectCommand.Parameters.AddWithValue("@TipoDNI", u.Persona.TipoDNI);
            cmdAdd.SelectCommand.Parameters.AddWithValue("@DNI", u.Persona.DNI);
            cmdAdd.SelectCommand.Parameters.AddWithValue("@FechaNac", u.Persona.FechaNac);
@@ -248,7 +248,7 @@ namespace Comedor.Control
        public void Editar(Usuario u)
        {
            conexion.open();
-           string query = "update Persona set PrimerNombre ='" + u.Persona.PrimerNombre + "', SegundoNombre='" + u.Persona.SegundoNombre + "', Apellidos='" + u.Persona.Apellidos + "', TipoDNI=" + u.Persona.TipoDNI + ", DNI='" + u.Persona.DNI + "',fechaNac='" + u.Persona.FechaNac.ToString("dd/MM/yyyy") + "',IdPais='" + u.Persona.Pais.IdPais + "',IdDepartamento='" + u.Persona.Departamento.IdDepartamento + "',Distrito='" + u.Persona.Distrito + "',idUsuarioMod='" + u.IdUsuarioMod + "', fechaMod = GETDATE() where IdPersona ='" + u.Persona.IdPersona + "'";
+           string query = "update Persona set Nombres ='" + u.Persona.Nombres + "', Paterno='" + u.Persona.Paterno + "', Materno='" + u.Persona.Materno + "', TipoDNI=" + u.Persona.TipoDNI + ", DNI='" + u.Persona.DNI + "',fechaNac='" + u.Persona.FechaNac.ToString("dd/MM/yyyy") + "',IdPais='" + u.Persona.Pais.IdPais + "',IdDepartamento='" + u.Persona.Departamento.IdDepartamento + "',Distrito='" + u.Persona.Distrito + "',idUsuarioMod='" + u.IdUsuarioMod + "', fechaMod = GETDATE() where IdPersona ='" + u.Persona.IdPersona + "'";
            SqlCommand queryCommand = new SqlCommand(query, conexion.get());
            queryCommand.ExecuteNonQuery();
 
@@ -291,7 +291,7 @@ namespace Comedor.Control
            conexion.open();
            
            // Create a String to hold the query.
-           string query = "SELECT Persona.IdPersona, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, Persona.TipoDNI, Persona.DNI, Persona.fechaNac, Persona.IdPais, Persona.IdDepartamento, Persona.Distrito, USUARIO.IdUsuario, USUARIO.login, USUARIO.passw, USUARIO.estado FROM Persona INNER JOIN USUARIO ON Persona.IdPersona = USUARIO.IdPersona WHERE (USUARIO.IdUsuario = N'"+idUsuario+"') ";
+           string query = "SELECT Persona.IdPersona, Persona.Nombres, Persona.Paterno, Persona.Materno, Persona.TipoDNI, Persona.DNI, Persona.fechaNac, Persona.IdPais, Persona.IdDepartamento, Persona.Distrito, USUARIO.IdUsuario, USUARIO.login, USUARIO.passw, USUARIO.estado FROM Persona INNER JOIN USUARIO ON Persona.IdPersona = USUARIO.IdPersona WHERE (USUARIO.IdUsuario = N'"+idUsuario+"') ";
 
            // Create a SqlCommand object and pass the constructor the connection string and the query string.
            SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -310,9 +310,9 @@ namespace Comedor.Control
                Usuario u = new Usuario();
                u.Persona = new Persona();
                u.Persona.IdPersona = item[0].ToString();
-               u.Persona.PrimerNombre = item[1].ToString();
-               u.Persona.SegundoNombre = item[2].ToString();
-               u.Persona.Apellidos = item[3].ToString();
+               u.Persona.Nombres = item[1].ToString();
+               u.Persona.Paterno = item[2].ToString();
+               u.Persona.Materno = item[3].ToString();
                u.Persona.TipoDNI = int.Parse(item[4].ToString());
                u.Persona.DNI = item[5].ToString();
                u.Persona.FechaNac = DateTime.Parse(item[6].ToString());

@@ -172,14 +172,14 @@ namespace Comedor.Vista.Consumidores
 
             foreach (consumidor item in this.consumidores)
             {
-                if ((item.Persona.PrimerNombre+" "+item.Persona.SegundoNombre).ToUpper().Contains(txtNombre.Text.ToUpper()) || (item.Persona.Apellidos.ToUpper().Contains(txtNombre.Text.ToUpper())))
+                if ((item.Persona.Nombres+" "+item.Persona.Paterno).ToUpper().Contains(txtNombre.Text.ToUpper()) || (item.Persona.Materno.ToUpper().Contains(txtNombre.Text.ToUpper())))
                 {
                     int n = dgvConsumidores.Rows.Add();
                     dgvConsumidores.Rows[n].Cells[0].Value = item.IdConsumidor;
                     dgvConsumidores.Rows[n].Cells[1].Value = n+1;
                     dgvConsumidores.Rows[n].Cells[2].Value = item.marcado;
-                    dgvConsumidores.Rows[n].Cells[3].Value = item.Persona.PrimerNombre + " " + item.Persona.SegundoNombre;
-                    dgvConsumidores.Rows[n].Cells[4].Value = item.Persona.Apellidos;
+                    dgvConsumidores.Rows[n].Cells[3].Value = item.Persona.Nombres + " " + item.Persona.Paterno;
+                    dgvConsumidores.Rows[n].Cells[4].Value = item.Persona.Materno;
                     dgvConsumidores.Rows[n].Cells[5].Value = item.Grupo.Nombre;
                     dgvConsumidores.Rows[n].Cells[6].Value = item.Area.Nombre;
                 }

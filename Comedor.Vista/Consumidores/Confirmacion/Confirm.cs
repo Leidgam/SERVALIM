@@ -92,7 +92,7 @@ namespace Comedor.Vista.Consumidores.Confirmacion
 
             column = new DataGridViewTextBoxColumn();
             column.HeaderText = "Apellidos";
-            column.DataPropertyName = "apellidos";
+            column.DataPropertyName = "Apellidos";
             column.Width = 150;
             column.ReadOnly = true;
             column.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -211,8 +211,8 @@ namespace Comedor.Vista.Consumidores.Confirmacion
                         int n = dgvConsumidores.Rows.Add();
                         dgvConsumidores.Rows[n].Cells[0].Value = item.IdReserva;
                         dgvConsumidores.Rows[n].Cells[1].Value = item.marcado;
-                        dgvConsumidores.Rows[n].Cells[2].Value = item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre;
-                        dgvConsumidores.Rows[n].Cells[3].Value = item.Consumidor.Persona.Apellidos;
+                        dgvConsumidores.Rows[n].Cells[2].Value = item.Consumidor.Persona.Nombres ;
+                        dgvConsumidores.Rows[n].Cells[3].Value = item.Consumidor.Persona.Paterno + " " + item.Consumidor.Persona.Materno;
                         dgvConsumidores.Rows[n].Cells[4].Value = item.Consumidor.Area.Nombre;
                         dgvConsumidores.Rows[n].Cells[5].Value = item.Fecha.ToString("dd/MM/yyyy");
                         dgvConsumidores.Rows[n].Cells[6].Value = item.Turno.Dia.Nombre;
@@ -234,7 +234,7 @@ namespace Comedor.Vista.Consumidores.Confirmacion
 
         private bool filtroSencible(consumidor item)
         {
-            return((item.Persona.PrimerNombre + " " + item.Persona.SegundoNombre).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Apellidos.ToUpper().Contains(txtNombre.Text.ToUpper()));
+            return((item.Persona.Nombres + " " + item.Persona.Paterno).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Materno.ToUpper().Contains(txtNombre.Text.ToUpper()));
         }
 
         private void checkDGV(DataGridView dgv)

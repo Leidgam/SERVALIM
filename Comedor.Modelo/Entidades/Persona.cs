@@ -16,26 +16,26 @@ namespace Comedor.Modelo
             get { return idPersona; }
             set { idPersona = value; }
         }
-       private String primerNombre;
+       private String nombres;
 
-       public String PrimerNombre
+       public String Nombres
        {
-           get { return primerNombre; }
-           set { primerNombre = value; }
+           get { return nombres; }
+           set { nombres = value; }
        }
-       private String segundoNombre;
+       private String paterno;
 
-       public String SegundoNombre
+       public String Paterno
        {
-           get { return segundoNombre; }
-           set { segundoNombre = value; }
+           get { return paterno; }
+           set { paterno = value; }
        }
-       private String apellidos;
+       private String materno;
 
-       public String Apellidos
+       public String Materno
        {
-           get { return apellidos; }
-           set { apellidos = value; }
+           get { return materno; }
+           set { materno = value; }
        }
        private int tipoDNI;
 

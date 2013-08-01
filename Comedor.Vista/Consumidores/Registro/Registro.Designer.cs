@@ -213,7 +213,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 21);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Nombre y Apellidos:";
+            this.label2.Text = "Nombre y Materno:";
             // 
             // label1
             // 

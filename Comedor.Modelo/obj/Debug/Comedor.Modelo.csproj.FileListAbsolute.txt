@@ -53,3 +53,10 @@ C:\ComedorGit\SERVALIM\Comedor.Modelo\obj\Debug\Comedor.Modelo.Properties.Resour
 C:\ComedorGit\SERVALIM\Comedor.Modelo\obj\Debug\Comedor.Modelo.csproj.GenerateResource.Cache
 C:\ComedorGit\SERVALIM\Comedor.Modelo\obj\Debug\Comedor.Modelo.exe
 C:\ComedorGit\SERVALIM\Comedor.Modelo\obj\Debug\Comedor.Modelo.pdb
+E:\MY\Proyectos\Comedor\Comedor.Modelo\bin\Debug\Comedor.Modelo.exe.config
+E:\MY\Proyectos\Comedor\Comedor.Modelo\bin\Debug\Comedor.Modelo.exe
+E:\MY\Proyectos\Comedor\Comedor.Modelo\bin\Debug\Comedor.Modelo.pdb
+E:\MY\Proyectos\Comedor\Comedor.Modelo\obj\Debug\Comedor.Modelo.Properties.Resources.resources
+E:\MY\Proyectos\Comedor\Comedor.Modelo\obj\Debug\Comedor.Modelo.csproj.GenerateResource.Cache
+E:\MY\Proyectos\Comedor\Comedor.Modelo\obj\Debug\Comedor.Modelo.exe
+E:\MY\Proyectos\Comedor\Comedor.Modelo\obj\Debug\Comedor.Modelo.pdb

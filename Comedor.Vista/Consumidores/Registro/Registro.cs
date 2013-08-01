@@ -70,8 +70,8 @@ namespace Comedor.Vista.Consumidores
             dgvConsumidores.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
-            column.HeaderText = "Nombre";
-            column.DataPropertyName = "nombre";
+            column.HeaderText = "Nombres";
+            column.DataPropertyName = "nombres";
             column.Width = 150;
             column.SortMode = DataGridViewColumnSortMode.NotSortable;
             column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -126,8 +126,8 @@ namespace Comedor.Vista.Consumidores
                     int n = dgvConsumidores.Rows.Add();
                     dgvConsumidores.Rows[n].Cells[0].Value = item.IdConsumidor;
                     dgvConsumidores.Rows[n].Cells[1].Value = item.codigo(periodo.IdPeriodo);
-                    dgvConsumidores.Rows[n].Cells[2].Value = item.Persona.PrimerNombre + " " + item.Persona.SegundoNombre;
-                    dgvConsumidores.Rows[n].Cells[3].Value = item.Persona.Apellidos;
+                    dgvConsumidores.Rows[n].Cells[2].Value = item.Persona.Nombres;
+                    dgvConsumidores.Rows[n].Cells[3].Value = item.Persona.Paterno+ " "+item.Persona.Materno ;
                     dgvConsumidores.Rows[n].Cells[4].Value = item.Area.Nombre;
 
                 }
@@ -138,7 +138,7 @@ namespace Comedor.Vista.Consumidores
 
         private bool filtroSencible(consumidor item)
         {
-            return item.codigo(periodo.IdPeriodo).ToUpper().Contains(txtCodigo.Text.ToUpper()) && ((item.Persona.PrimerNombre + " " + item.Persona.SegundoNombre).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Apellidos.ToUpper().Contains(txtNombre.Text.ToUpper()));
+            return item.codigo(periodo.IdPeriodo).ToUpper().Contains(txtCodigo.Text.ToUpper()) && ((item.Persona.Nombres + " " + item.Persona.Paterno).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Materno.ToUpper().Contains(txtNombre.Text.ToUpper()));
         }
 
         #endregion

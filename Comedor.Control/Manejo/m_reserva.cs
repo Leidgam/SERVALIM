@@ -107,7 +107,7 @@ namespace Comedor.Control
            conexion.open();
            List<RESERVA> reservas = new List<RESERVA>();
            // Create a String to hold the query.
-           string query = "SELECT        Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.fecha, RESERVA.Motivo, Area.IdArea,                          Area.Nombre AS Expr1, RESERVA.IdReserva, RESERVA.IdTurnoRemplazo, RESERVA.HoraBolsa, TURNO.DesAlmCen, DIA.nombre FROM            Area INNER JOIN                         RESERVA INNER JOIN                         CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN                         Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona ON Area.IdArea = CONSUMIDOR.IdArea INNER JOIN                         TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN                         DIA ON TURNO.IdDia = DIA.IdDia INNER JOIN                         Persona_Area ON Area.IdArea = Persona_Area.IdArea INNER JOIN                         Persona AS Persona_1 ON Persona_Area.IdPersona = Persona_1.IdPersona INNER JOIN                         USUARIO ON Persona_1.IdPersona = USUARIO.IdPersona WHERE        (CONSUMIDOR.estado <> 0) AND (RESERVA.estado <> 0) AND (RESERVA.estado <> 2) AND (RESERVA.IdUsuarioConfirmacion IS NULL) AND (RESERVA.tipo = 2) AND                          (USUARIO.IdUsuario = N'" + idUsuario + "')";
+           string query = "SELECT        Persona.Nombres, Persona.Paterno, Persona.Materno, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.fecha, RESERVA.Motivo, Area.IdArea,                          Area.Nombre AS Expr1, RESERVA.IdReserva, RESERVA.IdTurnoRemplazo, RESERVA.HoraBolsa, TURNO.DesAlmCen, DIA.nombre FROM            Area INNER JOIN                         RESERVA INNER JOIN                         CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN                         Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona ON Area.IdArea = CONSUMIDOR.IdArea INNER JOIN                         TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN                         DIA ON TURNO.IdDia = DIA.IdDia INNER JOIN                         Persona_Area ON Area.IdArea = Persona_Area.IdArea INNER JOIN                         Persona AS Persona_1 ON Persona_Area.IdPersona = Persona_1.IdPersona INNER JOIN                         USUARIO ON Persona_1.IdPersona = USUARIO.IdPersona WHERE        (CONSUMIDOR.estado <> 0) AND (RESERVA.estado <> 0) AND (RESERVA.estado <> 2) AND (RESERVA.IdUsuarioConfirmacion IS NULL) AND (RESERVA.tipo = 2) AND                          (USUARIO.IdUsuario = N'" + idUsuario + "')";
 
            // Create a SqlCommand object and pass the constructor the connection string and the query string.
            SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -126,9 +126,9 @@ namespace Comedor.Control
                RESERVA r = new RESERVA();
                r.Consumidor = new consumidor();
                r.Consumidor.Persona = new Persona();
-               r.Consumidor.Persona.PrimerNombre = item[0].ToString();
-               r.Consumidor.Persona.SegundoNombre = item[1].ToString();
-               r.Consumidor.Persona.Apellidos = item[2].ToString();
+               r.Consumidor.Persona.Nombres = item[0].ToString();
+               r.Consumidor.Persona.Paterno = item[1].ToString();
+               r.Consumidor.Persona.Materno = item[2].ToString();
                r.TipoServicio = int.Parse(item[3].ToString());
                r.Tipo = int.Parse(item[4].ToString());
                r.Fecha = DateTime.Parse(item[5].ToString());
@@ -178,7 +178,7 @@ namespace Comedor.Control
            conexion.open();
            List<RESERVA> reservas = new List<RESERVA>();
            // Create a String to hold the query.
-           string query = "SELECT        Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.fecha, RESERVA.Motivo, Area.IdArea,                          Area.Nombre AS Expr1, RESERVA.IdReserva, RESERVA.IdTurnoRemplazo, RESERVA.HoraBolsa, TURNO.DesAlmCen, DIA.nombre FROM            Area INNER JOIN                         RESERVA INNER JOIN                         CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN                         Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona ON Area.IdArea = CONSUMIDOR.IdArea INNER JOIN                         TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN                         DIA ON TURNO.IdDia = DIA.IdDia WHERE        (CONSUMIDOR.estado <> 0) AND (RESERVA.estado <> 2)  AND (RESERVA.estado <> 0) AND (RESERVA.IdUsuarioConfirmacion IS NULL) AND (RESERVA.tipo = 2)";
+           string query = "SELECT        Persona.Nombres, Persona.Paterno, Persona.Materno, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.fecha, RESERVA.Motivo, Area.IdArea,                          Area.Nombre AS Expr1, RESERVA.IdReserva, RESERVA.IdTurnoRemplazo, RESERVA.HoraBolsa, TURNO.DesAlmCen, DIA.nombre FROM            Area INNER JOIN                         RESERVA INNER JOIN                         CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN                         Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona ON Area.IdArea = CONSUMIDOR.IdArea INNER JOIN                         TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN                         DIA ON TURNO.IdDia = DIA.IdDia WHERE        (CONSUMIDOR.estado <> 0) AND (RESERVA.estado <> 2)  AND (RESERVA.estado <> 0) AND (RESERVA.IdUsuarioConfirmacion IS NULL) AND (RESERVA.tipo = 2)";
 
            // Create a SqlCommand object and pass the constructor the connection string and the query string.
            SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -197,9 +197,9 @@ namespace Comedor.Control
                RESERVA r = new RESERVA();
                r.Consumidor = new consumidor();
                r.Consumidor.Persona = new Persona();
-               r.Consumidor.Persona.PrimerNombre = item[0].ToString();
-               r.Consumidor.Persona.SegundoNombre = item[1].ToString();
-               r.Consumidor.Persona.Apellidos = item[2].ToString();
+               r.Consumidor.Persona.Nombres = item[0].ToString();
+               r.Consumidor.Persona.Paterno = item[1].ToString();
+               r.Consumidor.Persona.Materno = item[2].ToString();
                r.TipoServicio = int.Parse(item[3].ToString());
                r.Tipo = int.Parse(item[4].ToString());
                r.Fecha = DateTime.Parse(item[5].ToString());
@@ -424,7 +424,7 @@ namespace Comedor.Control
                if (IdEAP != "0") { whereIdEAP = " AND (EAP.IdEAP = N'" + IdEAP + "')"; }
 
                // Query ocacionales
-               string query = "SELECT RESERVA.IdReserva, RESERVA.IdTurno, RESERVA.IdTurnoRemplazo, CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, RESERVA.fecha, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.IdUsuarioConfirmacion, RESERVA.Motivo, RESERVA.HoraBolsa, Area.IdArea, Area.Nombre, EAP.IdEAP, EAP.Nombre AS Expr1, GRUPO.IdGrupo, GRUPO.Nombre AS Expr2, TURNO.DesAlmCen, DIA.nombre AS Expr3 FROM RESERVA INNER JOIN CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN EAP ON CONSUMIDOR.IdEAP = EAP.IdEAP INNER JOIN TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN DIA ON TURNO.IdDia = DIA.IdDia WHERE (RESERVA.estado <> 0) AND (RESERVA.estado <> 2)  AND (Area.estado <> 0) AND (EAP.estado <> 0) AND (GRUPO.estado <> 0) AND (CONSUMIDOR.estado <> 0) AND (RESERVA.IdUsuarioConfirmacion IS NOT NULL) AND (RESERVA.tipo = 2) AND (TURNO.estado <> 0) AND (DIA.estado <> 0) " + whereDate + whereDes + whereAlm + whereCena + wherePresencial + whereBolsa + whereIdGrupo + whereIdArea + whereIdEAP;
+               string query = "SELECT RESERVA.IdReserva, RESERVA.IdTurno, RESERVA.IdTurnoRemplazo, CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.Nombres, Persona.Paterno, Persona.Materno, RESERVA.fecha, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.IdUsuarioConfirmacion, RESERVA.Motivo, RESERVA.HoraBolsa, Area.IdArea, Area.Nombre, EAP.IdEAP, EAP.Nombre AS Expr1, GRUPO.IdGrupo, GRUPO.Nombre AS Expr2, TURNO.DesAlmCen, DIA.nombre AS Expr3 FROM RESERVA INNER JOIN CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN EAP ON CONSUMIDOR.IdEAP = EAP.IdEAP INNER JOIN TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN DIA ON TURNO.IdDia = DIA.IdDia WHERE (RESERVA.estado <> 0) AND (RESERVA.estado <> 2)  AND (Area.estado <> 0) AND (EAP.estado <> 0) AND (GRUPO.estado <> 0) AND (CONSUMIDOR.estado <> 0) AND (RESERVA.IdUsuarioConfirmacion IS NOT NULL) AND (RESERVA.tipo = 2) AND (TURNO.estado <> 0) AND (DIA.estado <> 0) " + whereDate + whereDes + whereAlm + whereCena + wherePresencial + whereBolsa + whereIdGrupo + whereIdArea + whereIdEAP;
 
                SqlCommand queryCommand = new SqlCommand(query, conexion.get());
                SqlDataReader queryCommandReader = queryCommand.ExecuteReader();
@@ -443,9 +443,9 @@ namespace Comedor.Control
                    r.Consumidor.IdConsumidor = item[3].ToString();
                    r.Consumidor.Persona = new Persona();
                    r.Consumidor.Persona.IdPersona = item[4].ToString();
-                   r.Consumidor.Persona.PrimerNombre = item[5].ToString();
-                   r.Consumidor.Persona.SegundoNombre = item[6].ToString();
-                   r.Consumidor.Persona.Apellidos = item[7].ToString();
+                   r.Consumidor.Persona.Nombres = item[5].ToString();
+                   r.Consumidor.Persona.Paterno = item[6].ToString();
+                   r.Consumidor.Persona.Materno = item[7].ToString();
                    r.Fecha = DateTime.Parse(item[8].ToString());
                    r.TipoServicio = int.Parse(item[9].ToString());
                    r.Tipo = int.Parse(item[10].ToString());
@@ -535,7 +535,7 @@ namespace Comedor.Control
                if (IdEAP != "0") { whereIdEAP = " AND (EAP.IdEAP = N'" + IdEAP + "')"; }
 
                // Query Permanentes
-               string query = "SELECT RESERVA.IdReserva, RESERVA.IdTurno, RESERVA.IdTurnoRemplazo, CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.PrimerNombre, Persona.SegundoNombre, Persona.Apellidos, RESERVA.fecha, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.IdUsuarioConfirmacion, RESERVA.Motivo, RESERVA.HoraBolsa, Area.IdArea, Area.Nombre, EAP.IdEAP, EAP.Nombre AS Expr1, GRUPO.IdGrupo, GRUPO.Nombre AS Expr2, TURNO.DesAlmCen, DIA.nombre AS Expr3 FROM RESERVA INNER JOIN CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN EAP ON CONSUMIDOR.IdEAP = EAP.IdEAP INNER JOIN TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN DIA ON TURNO.IdDia = DIA.IdDia WHERE (RESERVA.estado <> 0) AND (RESERVA.estado <> 2) AND (Area.estado <> 0) AND (EAP.estado <> 0) AND (GRUPO.estado <> 0) AND (CONSUMIDOR.estado <> 0) AND (RESERVA.IdUsuarioConfirmacion IS NOT NULL) AND (RESERVA.tipo = 1) AND (TURNO.estado <> 0) AND (DIA.estado <> 0) AND RESERVA.IdReserva not in (select IdReserva from Excepcion where estado<>0) " + whereDia + whereDes + whereAlm + whereCena + wherePresencial + whereBolsa + whereIdGrupo + whereIdArea + whereIdEAP;
+               string query = "SELECT RESERVA.IdReserva, RESERVA.IdTurno, RESERVA.IdTurnoRemplazo, CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.Nombres, Persona.Paterno, Persona.Materno, RESERVA.fecha, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.IdUsuarioConfirmacion, RESERVA.Motivo, RESERVA.HoraBolsa, Area.IdArea, Area.Nombre, EAP.IdEAP, EAP.Nombre AS Expr1, GRUPO.IdGrupo, GRUPO.Nombre AS Expr2, TURNO.DesAlmCen, DIA.nombre AS Expr3 FROM RESERVA INNER JOIN CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN EAP ON CONSUMIDOR.IdEAP = EAP.IdEAP INNER JOIN TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN DIA ON TURNO.IdDia = DIA.IdDia WHERE (RESERVA.estado <> 0) AND (RESERVA.estado <> 2) AND (Area.estado <> 0) AND (EAP.estado <> 0) AND (GRUPO.estado <> 0) AND (CONSUMIDOR.estado <> 0) AND (RESERVA.IdUsuarioConfirmacion IS NOT NULL) AND (RESERVA.tipo = 1) AND (TURNO.estado <> 0) AND (DIA.estado <> 0) AND RESERVA.IdReserva not in (select IdReserva from Excepcion where estado<>0) " + whereDia + whereDes + whereAlm + whereCena + wherePresencial + whereBolsa + whereIdGrupo + whereIdArea + whereIdEAP;
 
 
                SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -555,9 +555,9 @@ namespace Comedor.Control
                    r.Consumidor.IdConsumidor = item[3].ToString();
                    r.Consumidor.Persona = new Persona();
                    r.Consumidor.Persona.IdPersona = item[4].ToString();
-                   r.Consumidor.Persona.PrimerNombre = item[5].ToString();
-                   r.Consumidor.Persona.SegundoNombre = item[6].ToString();
-                   r.Consumidor.Persona.Apellidos = item[7].ToString();
+                   r.Consumidor.Persona.Nombres = item[5].ToString();
+                   r.Consumidor.Persona.Paterno = item[6].ToString();
+                   r.Consumidor.Persona.Materno = item[7].ToString();
                    r.Fecha = DateTime.Parse(item[8].ToString());
                    r.TipoServicio = int.Parse(item[9].ToString());
                    r.Tipo = int.Parse(item[10].ToString());

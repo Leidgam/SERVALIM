@@ -32,7 +32,7 @@ namespace Comedor.Vista.Consumidores.Incidencias
 
         private void iniciar()
         {
-            lblNombre.Text = consumidor.Persona.PrimerNombre + " " + consumidor.Persona.SegundoNombre + " " + consumidor.Persona.Apellidos;
+            lblNombre.Text = consumidor.Persona.Nombres + " " + consumidor.Persona.Paterno + " " + consumidor.Persona.Materno;
 
             consumidor.incidencias = _mConsumidor.ListarIncidencias(consumidor.IdConsumidor);
             Listar();

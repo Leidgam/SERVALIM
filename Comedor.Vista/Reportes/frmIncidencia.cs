@@ -116,8 +116,8 @@ namespace Comedor.Vista
                     dgvRegistro.Rows[n].Cells[0].Value = item.IdIncidencia;
                     dgvRegistro.Rows[n].Cells[1].Value = item.Consumidor.IdConsumidor;
                     dgvRegistro.Rows[n].Cells[2].Value = item.Consumidor.CodUniversitario;
-                    dgvRegistro.Rows[n].Cells[3].Value = item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre;
-                    dgvRegistro.Rows[n].Cells[4].Value = item.Consumidor.Persona.Apellidos;
+                    dgvRegistro.Rows[n].Cells[3].Value = item.Consumidor.Persona.Nombres;
+                    dgvRegistro.Rows[n].Cells[4].Value = item.Consumidor.Persona.Paterno + " " + item.Consumidor.Persona.Materno;
                     dgvRegistro.Rows[n].Cells[5].Value = item.FechaHora.Date.ToString("d");
                     dgvRegistro.Rows[n].Cells[6].Value = item.FechaHora.ToString("dddd", new System.Globalization.CultureInfo("es-ES"));
                     dgvRegistro.Rows[n].Cells[7].Value = item.IdTurno;
@@ -131,7 +131,7 @@ namespace Comedor.Vista
 
         private bool filtroSencible(Incidencia item)
         {
-            return (item.Consumidor.CodUniversitario).ToUpper().Contains(txtCodigo.Text.ToUpper()) && ((item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre).ToUpper().Contains(txtnombre.Text.ToUpper()) || item.Consumidor.Persona.Apellidos.ToUpper().Contains(txtnombre.Text.ToUpper()));
+            return (item.Consumidor.CodUniversitario).ToUpper().Contains(txtCodigo.Text.ToUpper()) && ((item.Consumidor.Persona.Nombres + " " + item.Consumidor.Persona.Paterno).ToUpper().Contains(txtnombre.Text.ToUpper()) || item.Consumidor.Persona.Materno.ToUpper().Contains(txtnombre.Text.ToUpper()));
         }
 
         private void ArreglaDataView1()

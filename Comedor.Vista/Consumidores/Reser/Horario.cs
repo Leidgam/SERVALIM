@@ -32,7 +32,7 @@ namespace Comedor.Vista.Consumidores.Reservas
 
         private void Iniciar()
         {
-            lblNombre.Text = consumidor.Persona.PrimerNombre + " " + consumidor.Persona.SegundoNombre + " " + consumidor.Persona.Apellidos;
+            lblNombre.Text = consumidor.Persona.Nombres + " " + consumidor.Persona.Paterno + " " + consumidor.Persona.Materno;
             cargarBD();
             ListarTurnos();
         }
@@ -266,7 +266,7 @@ namespace Comedor.Vista.Consumidores.Reservas
 
         private void Horario_Load(object sender, EventArgs e)
         {
-            
+            button2.Visible = false;
             Iniciar();
             
         }

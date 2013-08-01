@@ -132,14 +132,14 @@ namespace Comedor.Vista.Consumidores
 
             foreach (Consumidor_Periodo item in this.ListConsumidor)
             {
-                if ((item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre).ToUpper().Contains(txtNombreApellido.Text.ToUpper()) || (item.Consumidor.Persona.Apellidos.ToUpper().Contains(txtNombreApellido.Text.ToUpper())))
+                if ((item.Consumidor.Persona.Nombres + " " + item.Consumidor.Persona.Paterno).ToUpper().Contains(txtNombreApellido.Text.ToUpper()) || (item.Consumidor.Persona.Materno.ToUpper().Contains(txtNombreApellido.Text.ToUpper())))
                 {
                     int n = dgvConsumidor.Rows.Add();
                     dgvConsumidor.Rows[n].Cells[0].Value = item.Consumidor.IdConsumidor;
                     dgvConsumidor.Rows[n].Cells[1].Value = item.Consumidor.marcado;
                     dgvConsumidor.Rows[n].Cells[2].Value = item.Codigo;
-                    dgvConsumidor.Rows[n].Cells[3].Value = item.Consumidor.Persona.Apellidos;
-                    dgvConsumidor.Rows[n].Cells[4].Value = item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre;
+                    dgvConsumidor.Rows[n].Cells[3].Value = item.Consumidor.Persona.Materno;
+                    dgvConsumidor.Rows[n].Cells[4].Value = item.Consumidor.Persona.Nombres + " " + item.Consumidor.Persona.Paterno;
                 }
             }
 

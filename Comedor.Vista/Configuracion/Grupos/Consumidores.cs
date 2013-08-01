@@ -104,7 +104,7 @@ namespace Comedor.Vista.Configuracion
 
             column = new DataGridViewTextBoxColumn();
             column.HeaderText = "Apellidos";
-            column.DataPropertyName = "apellidos";
+            column.DataPropertyName = "Apellidos";
             column.Width = 200;
             column.SortMode = DataGridViewColumnSortMode.NotSortable;
             column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -152,7 +152,7 @@ namespace Comedor.Vista.Configuracion
 
         private bool filtroSencible(consumidor item)
         {
-            return item.codigo(periodo.IdPeriodo).ToUpper().Contains(txtCodigo.Text.ToUpper()) && ((item.Persona.PrimerNombre+" "+item.Persona.SegundoNombre).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Apellidos.ToUpper().Contains(txtNombre.Text.ToUpper()));
+            return item.codigo(periodo.IdPeriodo).ToUpper().Contains(txtCodigo.Text.ToUpper()) && ((item.Persona.Nombres+" "+item.Persona.Paterno).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Materno.ToUpper().Contains(txtNombre.Text.ToUpper()));
         }
 
         private void agregarFila(consumidor item)
@@ -162,8 +162,8 @@ namespace Comedor.Vista.Configuracion
             dgvConsumidores.Rows[n].Cells[1].Value = n+1;
             if (item.marcado) { dgvConsumidores.Rows[n].Cells[2].Value = true; }
             dgvConsumidores.Rows[n].Cells[3].Value = item.codigo(periodo.IdPeriodo);
-            dgvConsumidores.Rows[n].Cells[4].Value = item.Persona.PrimerNombre + " "+item.Persona.SegundoNombre;
-            dgvConsumidores.Rows[n].Cells[5].Value = item.Persona.Apellidos;
+            dgvConsumidores.Rows[n].Cells[4].Value = item.Persona.Nombres ;
+            dgvConsumidores.Rows[n].Cells[5].Value = item.Persona.Paterno + " " + item.Persona.Materno;
 
         }
 

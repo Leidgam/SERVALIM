@@ -47,8 +47,8 @@ namespace Comedor.Vista.Reportes
             List<ReportParameter> parameters = new List<ReportParameter>();
             ReportParameter path = new ReportParameter("Path", file.AbsoluteUri);
             ReportParameter CodUniv = new ReportParameter("CodUniv", cons.CodUniversitario);
-            ReportParameter Apellidos= new ReportParameter("Apellido", cons.Persona.Apellidos);
-            ReportParameter Nombres = new ReportParameter("Nombre", cons.Persona.PrimerNombre+" "+cons.Persona.SegundoNombre);
+            ReportParameter Materno= new ReportParameter("Apellido", cons.Persona.Materno);
+            ReportParameter Nombres = new ReportParameter("Nombre", cons.Persona.Nombres+" "+cons.Persona.Paterno);
             ReportParameter Residecia = new ReportParameter("Area", cons.Area.Nombre);
             ReportParameter Facultad = new ReportParameter("Facultad", cons.EAP.Facultad.Nombre);
             ReportParameter eap = new ReportParameter("EAP", cons.EAP.Nombre);
@@ -57,7 +57,7 @@ namespace Comedor.Vista.Reportes
 
             parameters.Add(path);
             parameters.Add(CodUniv);
-            parameters.Add(Apellidos);
+            parameters.Add(Materno);
             parameters.Add(Nombres);
             parameters.Add(Residecia);
             parameters.Add(Facultad);

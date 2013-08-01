@@ -118,7 +118,7 @@ namespace Comedor.Vista.Reportes
 
             column = new DataGridViewTextBoxColumn();
             column.HeaderText = "Apellidos";
-            column.DataPropertyName = "apellidos";
+            column.DataPropertyName = "Apellidos";
             column.Width = 150;
             column.ReadOnly = true;
             column.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -237,8 +237,8 @@ namespace Comedor.Vista.Reportes
                     int n = dgvReservas.Rows.Add();
                     dgvReservas.Rows[n].Cells[0].Value = item.IdReserva;
                     dgvReservas.Rows[n].Cells[1].Value = n+1;
-                    dgvReservas.Rows[n].Cells[2].Value = item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre;
-                    dgvReservas.Rows[n].Cells[3].Value = item.Consumidor.Persona.Apellidos;
+                    dgvReservas.Rows[n].Cells[2].Value = item.Consumidor.Persona.Nombres ;
+                    dgvReservas.Rows[n].Cells[3].Value = item.Consumidor.Persona.Paterno + " " + item.Consumidor.Persona.Materno;
                     dgvReservas.Rows[n].Cells[4].Value = item.Consumidor.Grupo.Nombre;
                     dgvReservas.Rows[n].Cells[5].Value = item.Fecha.ToString("dd/MM/yyyy");
                     dgvReservas.Rows[n].Cells[6].Value = item.Turno.Dia.Nombre;
@@ -260,7 +260,7 @@ namespace Comedor.Vista.Reportes
 
         private bool filtroSencible(consumidor item)
         {
-            return ((item.Persona.PrimerNombre + " " + item.Persona.SegundoNombre).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Apellidos.ToUpper().Contains(txtNombre.Text.ToUpper()));
+            return ((item.Persona.Nombres + " " + item.Persona.Paterno).ToUpper().Contains(txtNombre.Text.ToUpper()) || item.Persona.Materno.ToUpper().Contains(txtNombre.Text.ToUpper()));
         }
 
         #endregion

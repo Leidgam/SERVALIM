@@ -55,11 +55,11 @@
             this.cmbDni = new System.Windows.Forms.ComboBox();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtMaterno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSegNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.tabConsumidor = new System.Windows.Forms.TabPage();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -142,11 +142,11 @@
             this.tabPage1.Controls.Add(this.dtpFechaNac);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.txtApellidos);
+            this.tabPage1.Controls.Add(this.txtMaterno);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.txtSegNombre);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.txtPrimerNombre);
+            this.tabPage1.Controls.Add(this.txtNombres);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -401,39 +401,39 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            this.label3.Location = new System.Drawing.Point(542, 36);
+            this.label3.Location = new System.Drawing.Point(527, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 21);
+            this.label3.Size = new System.Drawing.Size(130, 21);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Apellidos";
+            this.label3.Text = "Apellido Materno";
             // 
-            // txtApellidos
+            // txtMaterno
             // 
-            this.txtApellidos.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(438, 60);
-            this.txtApellidos.MaxLength = 50;
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(279, 29);
-            this.txtApellidos.TabIndex = 14;
+            this.txtMaterno.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaterno.Location = new System.Drawing.Point(516, 60);
+            this.txtMaterno.MaxLength = 50;
+            this.txtMaterno.Name = "txtMaterno";
+            this.txtMaterno.Size = new System.Drawing.Size(201, 29);
+            this.txtMaterno.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            this.label2.Location = new System.Drawing.Point(240, 36);
+            this.label2.Location = new System.Drawing.Point(316, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 21);
+            this.label2.Size = new System.Drawing.Size(125, 21);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Segundo Nombre";
+            this.label2.Text = "Apellido Paterno";
             // 
             // txtSegNombre
             // 
             this.txtSegNombre.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSegNombre.Location = new System.Drawing.Point(220, 60);
+            this.txtSegNombre.Location = new System.Drawing.Point(305, 60);
             this.txtSegNombre.MaxLength = 50;
             this.txtSegNombre.Name = "txtSegNombre";
-            this.txtSegNombre.Size = new System.Drawing.Size(172, 29);
+            this.txtSegNombre.Size = new System.Drawing.Size(201, 29);
             this.txtSegNombre.TabIndex = 12;
             // 
             // label1
@@ -441,21 +441,21 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 36);
+            this.label1.Location = new System.Drawing.Point(18, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 21);
             this.label1.TabIndex = 11;
             this.label1.Text = "Primer Nombre";
             // 
-            // txtPrimerNombre
+            // txtNombres
             // 
-            this.txtPrimerNombre.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerNombre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPrimerNombre.Location = new System.Drawing.Point(16, 60);
-            this.txtPrimerNombre.MaxLength = 50;
-            this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(172, 29);
-            this.txtPrimerNombre.TabIndex = 10;
+            this.txtNombres.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNombres.Location = new System.Drawing.Point(16, 60);
+            this.txtNombres.MaxLength = 50;
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(274, 29);
+            this.txtNombres.TabIndex = 10;
             // 
             // tabConsumidor
             // 
@@ -987,11 +987,11 @@
         private System.Windows.Forms.ComboBox cmbDni;
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtMaterno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSegNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPrimerNombre;
+        private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.TabPage tabConsumidor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;

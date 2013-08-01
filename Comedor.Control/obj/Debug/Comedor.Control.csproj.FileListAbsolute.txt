@@ -80,6 +80,7 @@ E:\MY\Proyectos\Comedor\Comedor.Control\bin\Debug\Comedor.Control.exe
 E:\MY\Proyectos\Comedor\Comedor.Control\bin\Debug\Comedor.Control.pdb
 E:\MY\Proyectos\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.exe
 E:\MY\Proyectos\Comedor\Comedor.Control\bin\Debug\Comedor.Modelo.pdb
+E:\MY\Proyectos\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csprojResolveAssemblyReference.cache
 E:\MY\Proyectos\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Form1.resources
 E:\MY\Proyectos\Comedor\Comedor.Control\obj\Debug\Comedor.Control.Properties.Resources.resources
 E:\MY\Proyectos\Comedor\Comedor.Control\obj\Debug\Comedor.Control.csproj.GenerateResource.Cache

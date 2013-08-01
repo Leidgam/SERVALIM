@@ -35,7 +35,7 @@ namespace Comedor.Vista
             idconsumidor = mm.IdConsumidor(txtCodigo.Text);
             datosconsumidor = new consumidor();
             datosconsumidor = mm.Consumidor_reg(idconsumidor);
-            txtnombre.Text = datosconsumidor.Persona.Apellidos + " " + datosconsumidor.Persona.PrimerNombre;
+            txtnombre.Text = datosconsumidor.Persona.Materno + " " + datosconsumidor.Persona.Nombres;
         
         }
 

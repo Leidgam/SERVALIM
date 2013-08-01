@@ -168,13 +168,13 @@ namespace Comedor.Vista
             CantidadTotal = 0;
             foreach (Consumidor_Periodo item in this.ListConsumidor)
             {
-                if ((item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre).ToUpper().Contains(txtNombre.Text.ToUpper()) || (item.Consumidor.Persona.Apellidos.ToUpper().Contains(txtNombre.Text.ToUpper())))
+                if ((item.Consumidor.Persona.Nombres + " " + item.Consumidor.Persona.Paterno).ToUpper().Contains(txtNombre.Text.ToUpper()) || (item.Consumidor.Persona.Materno.ToUpper().Contains(txtNombre.Text.ToUpper())))
                 {
                     int n = dgvConsumidor.Rows.Add();
                     dgvConsumidor.Rows[n].Cells[0].Value = item.Consumidor.IdConsumidor;
                     dgvConsumidor.Rows[n].Cells[1].Value = item.Codigo;
-                    dgvConsumidor.Rows[n].Cells[2].Value = item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre;
-                    dgvConsumidor.Rows[n].Cells[3].Value = item.Consumidor.Persona.Apellidos;
+                    dgvConsumidor.Rows[n].Cells[2].Value = item.Consumidor.Persona.Nombres;
+                    dgvConsumidor.Rows[n].Cells[3].Value = item.Consumidor.Persona.Paterno+ " "+item.Consumidor.Persona.Materno;
                     if (item.Consumidor.CodUniversitario == " " || item.Consumidor.CodUniversitario == "" || item.Consumidor.CodUniversitario == null)
                     {
                         dgvConsumidor.Rows[n].Cells[4].Value = "-";
@@ -233,7 +233,7 @@ namespace Comedor.Vista
 
 
             column = new DataGridViewTextBoxColumn();
-            column.HeaderText = "APELLIDOS";
+            column.HeaderText = "Apellidos";
             column.DataPropertyName = "apellido";
             column.Width = 220;
             column.SortMode = DataGridViewColumnSortMode.Automatic;

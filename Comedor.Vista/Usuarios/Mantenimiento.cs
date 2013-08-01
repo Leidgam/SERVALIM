@@ -82,7 +82,7 @@ namespace Comedor.Vista.Usuarios
 
             column = new DataGridViewTextBoxColumn();
             column.HeaderText = "Apellidos";
-            column.DataPropertyName = "apellidos";
+            column.DataPropertyName = "Apellidos";
             column.Width = 150;
             column.SortMode = DataGridViewColumnSortMode.NotSortable;
             column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -161,8 +161,8 @@ namespace Comedor.Vista.Usuarios
             int n = dgvUsuarios.Rows.Add();
             dgvUsuarios.Rows[n].Cells[0].Value = item.IdUsuario;
             dgvUsuarios.Rows[n].Cells[1].Value = item.Login;
-            dgvUsuarios.Rows[n].Cells[2].Value = item.Persona.PrimerNombre + " " + item.Persona.SegundoNombre;
-            dgvUsuarios.Rows[n].Cells[3].Value = item.Persona.Apellidos;
+            dgvUsuarios.Rows[n].Cells[2].Value = item.Persona.Nombres + " " + item.Persona.Paterno;
+            dgvUsuarios.Rows[n].Cells[3].Value = item.Persona.Materno;
             dgvUsuarios.Rows[n].Cells[4].Value = Comedor.Vista.Properties.Resources.male_female_users;
             dgvUsuarios.Rows[n].Cells[5].Value = Comedor.Vista.Properties.Resources.search_image;
             dgvUsuarios.Rows[n].Cells[6].Value = Comedor.Vista.Properties.Resources.edit;

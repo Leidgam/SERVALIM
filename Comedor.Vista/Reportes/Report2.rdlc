@@ -332,7 +332,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox63">
+                    <Textbox Name="Textbox8">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -350,7 +350,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox63</rd:DefaultName>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -404,7 +404,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="CodUniv1">
+                    <Textbox Name="CodUniv">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -420,7 +420,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>CodUniv1</rd:DefaultName>
+                      <rd:DefaultName>CodUniv</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -1003,7 +1003,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>1b94500e-45e9-4f47-9190-a9b33b92fe7e</rd:DataSourceID>
+      <rd:DataSourceID>7499496c-666e-47ae-8df9-dd94cda08b8d</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1025,18 +1025,18 @@
           <DataField>Nombres</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Apellidos">
-          <DataField>Apellidos</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="CodUniv">
           <DataField>CodUniv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Apellidos">
+          <DataField>Apellidos</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet2</rd:DataSetName>
-        <rd:SchemaPath>C:\Proyec_C#\Comedor\Comedor.Vista\Reportes\DataSet2.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\MY\Proyectos\Comedor\Comedor.Vista\Reportes\DataSet2.xsd</rd:SchemaPath>
         <rd:TableName>Consumidor</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

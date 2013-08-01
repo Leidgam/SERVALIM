@@ -81,8 +81,9 @@ namespace Comedor.Vista.Reportes
 
                 filaCon["Numero"] = i++;
                 filaCon["Codigo"] = item.Codigo;
-                filaCon["Nombres"] = item.Consumidor.Persona.PrimerNombre + " " + item.Consumidor.Persona.SegundoNombre;
-                filaCon["Apellidos"] = item.Consumidor.Persona.Apellidos;
+                filaCon["Nombres"] = item.Consumidor.Persona.Nombres ;
+                filaCon["Apellidos"] = item.Consumidor.Persona.Paterno + " " + item.Consumidor.Persona.Materno;
+                MessageBox.Show(item.Consumidor.Persona.Paterno);
                 if (item.Consumidor.CodUniversitario == " " || item.Consumidor.CodUniversitario == "" || item.Consumidor.CodUniversitario == null)
                 {
                     filaCon["CodUniv"] = "-";
