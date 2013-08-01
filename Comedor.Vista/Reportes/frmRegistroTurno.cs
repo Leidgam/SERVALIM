@@ -242,7 +242,9 @@ namespace Comedor.Vista
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.AppStarting;
             Iniciar();
+            this.Cursor = Cursors.Default;
         }
 
         private void rbnUnafecha_CheckedChanged(object sender, EventArgs e)

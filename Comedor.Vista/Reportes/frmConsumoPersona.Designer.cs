@@ -825,6 +825,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmConsumoPersona";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Consumo";
             this.Load += new System.EventHandler(this.frmConsumoPersona_Load);
             this.panel1.ResumeLayout(false);

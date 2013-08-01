@@ -46,7 +46,8 @@
             this.ClientSize = new System.Drawing.Size(599, 346);
             this.Controls.Add(this.rvReporte);
             this.Name = "PrintReportConsumidorPersona";
-            this.Text = "PrintReportConsumidorPersona";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Imprimir Reporte";
             this.Load += new System.EventHandler(this.PrintReportConsumidorPersona_Load);
             this.ResumeLayout(false);
 
