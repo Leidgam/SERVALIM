@@ -68,6 +68,18 @@
     <Compile Include="Acceso\Logueo.Designer.cs">
       <DependentUpon>Logueo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consumidores\Bolsas\Control Bolsas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Bolsas\Control Bolsas.Designer.cs">
+      <DependentUpon>Control Bolsas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumidores\Bolsas\Entrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumidores\Bolsas\Entrega.Designer.cs">
+      <DependentUpon>Entrega.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consumidores\Confirmacion\Confirm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +345,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Acceso\Logueo.resx">
       <DependentUpon>Logueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Bolsas\Control Bolsas.resx">
+      <DependentUpon>Control Bolsas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumidores\Bolsas\Entrega.resx">
+      <DependentUpon>Entrega.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consumidores\Confirmacion\Confirm.resx">
       <DependentUpon>Confirm.cs</DependentUpon>

@@ -195,6 +195,14 @@ namespace Comedor.Vista
             form.Show();
         }
 
+        private void subControl_Click(object sender, EventArgs e)
+        {
+            Consumidores.Bolsas.Control_Bolsas form = new Consumidores.Bolsas.Control_Bolsas();
+            form.usuario = this.usuario;
+            form.MdiParent = this;
+            form.Show();
+        }
+
 
 
 

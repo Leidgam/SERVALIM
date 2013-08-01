@@ -351,3 +351,5 @@ C:\ComedorGit\SERVALIM\Comedor.Vista\obj\Debug\Comedor.Vista.Usuarios.Roles.reso
 C:\ComedorGit\SERVALIM\Comedor.Vista\obj\Debug\Comedor.Vista.csproj.GenerateResource.Cache
 C:\ComedorGit\SERVALIM\Comedor.Vista\obj\Debug\RdlCompile.cache
 C:\ComedorGit\SERVALIM\Comedor.Vista\obj\Debug\RdlCompile.compiled
+E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.Consumidores.Bolsas.Control_Bolsas.resources
+E:\MY\Proyectos\Comedor\Comedor.Vista\obj\Debug\Comedor.Vista.Consumidores.Bolsas.Entrega.resources

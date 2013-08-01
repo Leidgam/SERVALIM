@@ -117,5 +117,13 @@ namespace Comedor.Modelo
         }
 
         public bool marcado;
+
+        string stado;
+
+        public string Stado
+        {
+            get { return stado; }
+            set { stado = value; }
+        }
     }
 }

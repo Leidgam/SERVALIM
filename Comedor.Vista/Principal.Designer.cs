@@ -113,7 +113,8 @@
             // 
             this.subControl.Name = "subControl";
             this.subControl.Size = new System.Drawing.Size(254, 26);
-            this.subControl.Text = "Control";
+            this.subControl.Text = "Control Bolsas";
+            this.subControl.Click += new System.EventHandler(this.subControl_Click);
             // 
             // subMatricular
             // 

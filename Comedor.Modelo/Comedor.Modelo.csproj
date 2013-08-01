@@ -81,6 +81,7 @@
     <Compile Include="Entidades\Rol_Privilegio.cs" />
     <Compile Include="Entidades\Usuario_Privilegio.cs" />
     <Compile Include="Entidades\Usuario_Rol.cs" />
+    <Compile Include="RegistroBolsa.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

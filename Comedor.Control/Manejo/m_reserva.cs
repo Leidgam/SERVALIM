@@ -89,6 +89,36 @@ namespace Comedor.Control
            return turnos;
        }
 
+       public List<RegistroBolsa> getREgistroBolsas(bool unica, DateTime desde, DateTime hasta)
+       {
+           String whereDate = "";
+           if (unica) { whereDate = "(CONVERT(DATE,fechaEmision)=CONVERT(DATE,'" + desde.ToString("dd/MM/yyyy") + "'))"; } else { whereDate = " (CONVERT(DATE,fechaEmision)>=CONVERT(DATE,'" + desde.ToString("dd/MM/yyyy") + "') and CONVERT(DATE,fechaEmision)<=CONVERT(DATE,'" + hasta.ToString("dd/MM/yyyy") + "'))"; }
+
+           conexion.open();
+           List<RegistroBolsa> entregas = new List<RegistroBolsa>();
+           string query = "SELECT IdReserva, Persona, motivo, fechaHora, idUsuario FROM RegistroBolsa WHERE  "+whereDate;
+  
+           SqlCommand queryCommand = new SqlCommand(query, conexion.get());
+           SqlDataReader queryCommandReader = queryCommand.ExecuteReader();
+           DataTable dataTable = new DataTable();
+           dataTable.Load(queryCommandReader);
+
+           foreach (DataRow item in dataTable.Rows)
+           {
+               RegistroBolsa registro = new RegistroBolsa();
+               registro.Reserva = new RESERVA();
+               registro.Reserva.IdReserva = item[0].ToString();
+               registro.Persona = item[1].ToString();
+               registro.Motivo = item[2].ToString();
+               registro.FechaHora = DateTime.Parse(item[3].ToString());
+               registro.IdUsuario = item[4].ToString();
+
+               entregas.Add(registro);
+           }
+
+
+           return entregas;
+       }
        public void confirmar(List<RESERVA> reservas)
        {
            String ids = "";
@@ -535,7 +565,7 @@ namespace Comedor.Control
                if (IdEAP != "0") { whereIdEAP = " AND (EAP.IdEAP = N'" + IdEAP + "')"; }
 
                // Query Permanentes
-               string query = "SELECT RESERVA.IdReserva, RESERVA.IdTurno, RESERVA.IdTurnoRemplazo, CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.Nombres, Persona.Paterno, Persona.Materno, RESERVA.fecha, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.IdUsuarioConfirmacion, RESERVA.Motivo, RESERVA.HoraBolsa, Area.IdArea, Area.Nombre, EAP.IdEAP, EAP.Nombre AS Expr1, GRUPO.IdGrupo, GRUPO.Nombre AS Expr2, TURNO.DesAlmCen, DIA.nombre AS Expr3 FROM RESERVA INNER JOIN CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN EAP ON CONSUMIDOR.IdEAP = EAP.IdEAP INNER JOIN TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN DIA ON TURNO.IdDia = DIA.IdDia WHERE (RESERVA.estado <> 0) AND (RESERVA.estado <> 2) AND (Area.estado <> 0) AND (EAP.estado <> 0) AND (GRUPO.estado <> 0) AND (CONSUMIDOR.estado <> 0) AND (RESERVA.IdUsuarioConfirmacion IS NOT NULL) AND (RESERVA.tipo = 1) AND (TURNO.estado <> 0) AND (DIA.estado <> 0) AND RESERVA.IdReserva not in (select IdReserva from Excepcion where estado<>0) " + whereDia + whereDes + whereAlm + whereCena + wherePresencial + whereBolsa + whereIdGrupo + whereIdArea + whereIdEAP;
+               string query = "SELECT RESERVA.IdReserva, RESERVA.IdTurno, RESERVA.IdTurnoRemplazo, CONSUMIDOR.IdConsumidor, Persona.IdPersona, Persona.Nombres, Persona.Paterno, Persona.Materno, RESERVA.fecha, RESERVA.tipoServicio, RESERVA.tipo, RESERVA.IdUsuarioConfirmacion, RESERVA.Motivo, RESERVA.HoraBolsa, Area.IdArea, Area.Nombre, EAP.IdEAP, EAP.Nombre AS Expr1, GRUPO.IdGrupo, GRUPO.Nombre AS Expr2, TURNO.DesAlmCen, DIA.nombre AS Expr3 FROM RESERVA INNER JOIN CONSUMIDOR ON RESERVA.IdConsumidor = CONSUMIDOR.IdConsumidor INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona INNER JOIN Area ON CONSUMIDOR.IdArea = Area.IdArea INNER JOIN GRUPO ON CONSUMIDOR.IdGrupo = GRUPO.IdGrupo INNER JOIN EAP ON CONSUMIDOR.IdEAP = EAP.IdEAP INNER JOIN TURNO ON RESERVA.IdTurno = TURNO.IdTurno INNER JOIN DIA ON TURNO.IdDia = DIA.IdDia WHERE (RESERVA.estado <> 0) AND (RESERVA.estado <> 2) AND (Area.estado <> 0) AND (EAP.estado <> 0) AND (GRUPO.estado <> 0) AND (CONSUMIDOR.estado <> 0) AND (RESERVA.tipo = 1) AND (TURNO.estado <> 0) AND (DIA.estado <> 0) AND RESERVA.IdReserva not in (select IdReserva from Excepcion where estado<>0) " + whereDia + whereDes + whereAlm + whereCena + wherePresencial + whereBolsa + whereIdGrupo + whereIdArea + whereIdEAP;
 
 
                SqlCommand queryCommand = new SqlCommand(query, conexion.get());
@@ -691,6 +721,15 @@ namespace Comedor.Control
        {
            conexion.open();
            string query2 = "UPDATE Reserva SET tipoServicio="+tipoServicio+" WHERE IdReserva='" + idReserva + "'";
+           SqlCommand queryCommand2 = new SqlCommand(query2, conexion.get());
+           queryCommand2.ExecuteNonQuery();
+           conexion.close();
+       }
+
+       public void insertarEntrega(RESERVA reserva, RegistroBolsa reg, String idUsuario)
+       {
+           conexion.open();
+           string query2 = "insert into RegistroBolsa values ('"+reserva.IdReserva+"','"+reg.Persona+"','"+reg.Motivo+"','"+reg.FechaHora.ToString("yyyy-MM-dd")+"','"+idUsuario+"', '"+reserva.Fecha.ToString("yyyy-MM-dd")+"', '"+DateTime.Today.ToString("yyyy-MM-dd")+"')";
            SqlCommand queryCommand2 = new SqlCommand(query2, conexion.get());
            queryCommand2.ExecuteNonQuery();
            conexion.close();
