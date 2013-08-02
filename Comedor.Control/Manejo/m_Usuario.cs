@@ -203,7 +203,7 @@ namespace Comedor.Control
 
            cmdAdd.SelectCommand.Parameters.AddWithValue("@Nombres", u.Persona.Nombres);
            cmdAdd.SelectCommand.Parameters.AddWithValue("@Paterno ", u.Persona.Paterno);
-           cmdAdd.SelectCommand.Parameters.AddWithValue("@apellido", u.Persona.Materno);
+           cmdAdd.SelectCommand.Parameters.AddWithValue("@Materno", u.Persona.Materno);
            cmdAdd.SelectCommand.Parameters.AddWithValue("@TipoDNI", u.Persona.TipoDNI);
            cmdAdd.SelectCommand.Parameters.AddWithValue("@DNI", u.Persona.DNI);
            cmdAdd.SelectCommand.Parameters.AddWithValue("@FechaNac", u.Persona.FechaNac);
