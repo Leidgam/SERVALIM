@@ -80,8 +80,9 @@
             // subSalir
             // 
             this.subSalir.Name = "subSalir";
-            this.subSalir.Size = new System.Drawing.Size(111, 26);
+            this.subSalir.Size = new System.Drawing.Size(152, 26);
             this.subSalir.Text = "Salir";
+            this.subSalir.Click += new System.EventHandler(this.subSalir_Click);
             // 
             // menCons
             // 

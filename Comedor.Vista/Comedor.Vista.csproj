@@ -313,6 +313,7 @@
     <Compile Include="Reportes\Reserv\Reservas.Designer.cs">
       <DependentUpon>Reservas.cs</DependentUpon>
     </Compile>
+    <Compile Include="temp.cs" />
     <Compile Include="Usuarios\Asignacion.cs">
       <SubType>Form</SubType>
     </Compile>

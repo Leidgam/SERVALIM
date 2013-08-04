@@ -129,6 +129,7 @@
             this.txtPassw.Size = new System.Drawing.Size(130, 25);
             this.txtPassw.TabIndex = 11;
             this.txtPassw.UseSystemPasswordChar = true;
+            this.txtPassw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassw_KeyUp);
             // 
             // txtLogin
             // 

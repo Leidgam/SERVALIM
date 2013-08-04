@@ -93,14 +93,22 @@ namespace Comedor.Vista.Acceso
 
         private void label4_DoubleClick(object sender, EventArgs e)
         {
-            txtLogin.Text = " ";
-            txtPassw.Text = " ";
-            IniciarSesion("blessed", "holaaa");
+          //  txtLogin.Text = " ";
+           // txtPassw.Text = " ";
+          //  IniciarSesion("blessed", "holaaa");
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPassw_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                IniciarSesion(txtLogin.Text, txtPassw.Text);
+            }
         }
     }
 }
