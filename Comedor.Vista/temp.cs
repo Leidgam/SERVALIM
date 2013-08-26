@@ -32,10 +32,9 @@ namespace Comedor.Vista
         public void GuardarFoto1(Image img, String idPersona)
         {
 
-            img.Save(@"\\192.168.102.18\Fotos\" + idPersona + ".jpg", ImageFormat.Jpeg);
+            img.Save(@"\\CONTROLALIMENTA\Fotos\" + idPersona + ".jpg", ImageFormat.Jpeg);
             
         }
-
 
         public void empezar()
         {
@@ -109,8 +108,122 @@ namespace Comedor.Vista
                     {
                         GuardarFoto(idPersona, foto);
                     }
+                    else
+                    {
+                        GuardarFoto(idPersona, Image.FromStream(new FileStream(@"E:\FotosAnt\PR00000024.jpg",FileMode.Open, FileAccess.Read)));
+                    }
                 }
             }
+        }
+
+        public void empezar1()
+        {
+            List<consumidor> listaTEMP2 = new List<consumidor>();
+            string query = "select * from TEMP2";
+            // Create a SqlCommand object and pass the constructor the connection string and the query string.
+            conn.open();
+            SqlCommand queryCommand = new SqlCommand(query, conn.get());
+            // Use the above SqlCommand object to create a SqlDataReader object.
+            SqlDataReader queryCommandReader = queryCommand.ExecuteReader();
+
+            // Create a DataTable object to hold all the data returned by the query.
+            DataTable dataTable = new DataTable();
+
+            // Use the DataTable.Load(SqlDataReader) function to put the results of the query into a DataTable.
+            dataTable.Load(queryCommandReader);
+            m_consumidor mc = new m_consumidor();
+            foreach (DataRow item in dataTable.Rows)
+            {
+                consumidor cons = new consumidor();
+                int año = int.Parse(item[0].ToString());
+                cons.Ciclo = (año * 2);
+                cons.EAP = new EAP();
+                cons.EAP.IdEAP = item[1].ToString();
+                cons.Persona = new Persona();
+             
+                cons.Persona.Paterno = item[2].ToString();
+                cons.Persona.Materno = item[3].ToString();
+                cons.Persona.Nombres = item[4].ToString();
+                cons.CodUniversitario = (item[5].ToString()).Trim();
+                cons.Area = new Area();
+                cons.Area.IdArea = "007";
+                Comedor.Modelo.Auxiliares.cambioConsumidor cambio = new Modelo.Auxiliares.cambioConsumidor();
+                cambio.contacto= true;
+                cambio.agregar = true;
+                Contacto cont = new Contacto();
+                cont.Valor = item[7].ToString();
+                cont.Tipo = 1;
+                cont.Descripcion = "Implementación DIGUESI";
+                cambio.contact = cont;
+
+                cons.cambios.Add(cambio);
+
+                  Comedor.Modelo.Auxiliares.cambioConsumidor cambio2 = new Modelo.Auxiliares.cambioConsumidor();
+                cambio2.contacto= true;
+                cambio2.agregar = true;
+                Contacto cont2 = new Contacto();
+                cont2.Valor = item[8].ToString();
+                cont2.Tipo = 2;
+                cont2.Descripcion = "Implementación DIGUESI";
+                cambio2.contact = cont;
+
+                cons.cambios.Add(cambio);
+
+                cons.Persona.TipoDNI = 1;
+                cons.Persona.DNI = item[9].ToString();
+                cons.Persona.FechaNac = DateTime.Parse(item[11].ToString());
+                cons.Persona.Pais = new Pais();
+                cons.Persona.Pais.IdPais = "177";
+                cons.Persona.Departamento = new Departamento();
+                cons.Persona.Departamento.IdDepartamento = "2911";
+                cons.Persona.Distrito = item[16].ToString();
+                cons.IdUsuarioReg = "US00000001";
+                cons.Grupo = new Grupo();
+                cons.Grupo.IdGrupo = "GR00000001";
+                listaTEMP2.Add(cons);
+
+
+            }
+
+             string query2 = "SELECT Persona.IdPersona, CONSUMIDOR.IdConsumidor, CONSUMIDOR.CodUniversitario FROM Persona INNER JOIN CONSUMIDOR ON Persona.IdPersona = CONSUMIDOR.IdPersona";
+            // Create a SqlCommand object and pass the constructor the connection string and the query string.
+            conn.open();
+            SqlCommand queryCommand2 = new SqlCommand(query2, conn.get());
+            // Use the above SqlCommand object to create a SqlDataReader object.
+            SqlDataReader queryCommandReader2 = queryCommand2.ExecuteReader();
+
+            // Create a DataTable object to hold all the data returned by the query.
+            DataTable dataTable2 = new DataTable();
+        
+            // Use the DataTable.Load(SqlDataReader) function to put the results of the query into a DataTable.
+            dataTable2.Load(queryCommandReader2);
+            int todos = 0;
+            foreach (DataRow item in dataTable2.Rows)
+            {
+                bool t = buscarSus(listaTEMP2, item[2].ToString(), item[0].ToString(), item[1].ToString());
+                if (t)
+                {
+                    todos++;
+                }
+            }
+            MessageBox.Show(todos+"");
+
+        }
+        m_consumidor _mConsumidor = new m_consumidor();
+        private bool buscarSus(List<consumidor> lista, String codUniversitario, String idPersona, string idConsumidor)
+        {
+            foreach (consumidor item in lista)
+            {
+                if (item.CodUniversitario.Equals(codUniversitario) || item.CodUniversitario == codUniversitario)
+                {
+                    item.Persona.IdPersona = idPersona;
+                    item.IdConsumidor = idConsumidor;
+                    _mConsumidor.Editar(item);
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void empezar43()
@@ -154,7 +267,7 @@ namespace Comedor.Vista
                 lista.Add(registro);
             }
             
-          /*  string query2 = "SELECT Persona.IdPersona, CONSUMIDOR.CodUniversitario FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona";
+            string query2 = "SELECT Persona.IdPersona, CONSUMIDOR.CodUniversitario FROM CONSUMIDOR INNER JOIN Persona ON CONSUMIDOR.IdPersona = Persona.IdPersona";
             SqlCommand queryCommand2 = new SqlCommand(query2, conn.get());
             SqlDataReader queryCommandReader2 = queryCommand2.ExecuteReader();
             DataTable dataTable2 = new DataTable();
@@ -184,20 +297,20 @@ namespace Comedor.Vista
                         GuardarFoto(item[0].ToString(),foto);
                     }
                 }
-            }*/
+            }
         }
 
         private void GuardarFoto(String nombre, Image img)
         {
 
-            if (System.IO.File.Exists(@"\\192.168.102.18\Fotos\" + nombre + ".jpg"))
+            if (System.IO.File.Exists(@"\\CONTROLALIMENTA\Fotos\" + nombre + ".jpg"))
             {
                 // Use a try block to catch IOExceptions, to
                 // handle the case of the file already being
                 // opened by another process.
                 try
                 {
-                    System.IO.File.Delete(@"\\192.168.102.18\Fotos\" + nombre + ".jpg");
+                    System.IO.File.Delete(@"\\CONTROLALIMENTA\Fotos\" + nombre + ".jpg");
                 }
                 catch (System.IO.IOException e)
                 {
@@ -208,7 +321,7 @@ namespace Comedor.Vista
             try
             {
                 Image foto = ResizeImage(img, 420, 500);
-                foto.Save(@"\\192.168.102.18\Fotos\" + nombre + ".jpg", ImageFormat.Jpeg);
+                foto.Save(@"\\CONTROLALIMENTA\Fotos\" + nombre + ".jpg", ImageFormat.Jpeg);
             }
             catch (Exception ex)
             {
@@ -271,6 +384,7 @@ namespace Comedor.Vista
             }
             return "003";
         }
+
         public byte[] getFoto(Image foto)
         {
             MemoryStream ms = new MemoryStream();
@@ -279,7 +393,6 @@ namespace Comedor.Vista
             byte[] imagen = ms.GetBuffer();
             return imagen;
         }
-
 
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
@@ -330,5 +443,6 @@ namespace Comedor.Vista
             }
             return _tmpImage;
         }
+
     }
 }

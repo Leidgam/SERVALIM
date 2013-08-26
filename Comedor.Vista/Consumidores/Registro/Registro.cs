@@ -275,6 +275,22 @@ namespace Comedor.Vista.Consumidores
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvConsumidores.Rows.Count > 0)
+            {
+                int fila = dgvConsumidores.CurrentRow.Index;
+                if (MessageBox.Show("¿Desea eliminar a este consumidor?", "ELIMINAR CONSUMIDOR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    m_consumidor _mConsumidor = new m_consumidor();
+                    _mConsumidor.eliminar(dgvConsumidores[0,fila].Value.ToString());
+                    Iniciar();
+                    txtCodigo.Text = "";
+                    txtNombre.Text = "";
+                }
+            }
+        }
+
         
 
 

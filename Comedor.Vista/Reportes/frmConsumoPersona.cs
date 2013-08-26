@@ -179,7 +179,7 @@ namespace Comedor.Vista
             txtCodUniv.Text = datosconsumidor.CodUniversitario;
             try
             {
-                pbxFoto.Image = Image.FromFile(@"\\\\CONTROLALIMENTA\\Fotos\" + datosconsumidor.Persona.IdPersona + ".jpg");
+                pbxFoto.Image = Image.FromFile(@"\\CONTROLALIMENTA\Fotos\" + datosconsumidor.Persona.IdPersona + ".jpg");
             }
             catch (Exception ex)
             {

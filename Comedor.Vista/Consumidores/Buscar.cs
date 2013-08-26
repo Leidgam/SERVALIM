@@ -34,8 +34,6 @@ namespace Comedor.Vista.Consumidores
            m_consumidor mc = new m_consumidor();
            this.ListGrupo = mc.ListarGrupoAreaConsumidor(1,this.usuario);
            this.ListArea = mc.ListarGrupoAreaConsumidor(2, this.usuario);
-          
-
 
          //  llenar();
            Listar();

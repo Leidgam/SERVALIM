@@ -57,7 +57,7 @@ namespace Comedor.Vista.Consumidores
             try
             {
                 Image foto;
-                using (FileStream stream = new FileStream(@"\\192.168.102.18\Fotos\" + idPersona + ".jpg", FileMode.Open, FileAccess.Read))
+                using (FileStream stream = new FileStream(@"\\CONTROLALIMENTA\Fotos\" + idPersona + ".jpg", FileMode.Open, FileAccess.Read))
                 {
                     foto = Image.FromStream(stream);
                 }

@@ -171,7 +171,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(524, 64);
+            this.label2.Location = new System.Drawing.Point(528, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 13;
@@ -180,7 +180,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(512, 29);
+            this.label1.Location = new System.Drawing.Point(521, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 12;
@@ -344,6 +344,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Comedor.Vista.Properties.Resources.white_back;
             this.ClientSize = new System.Drawing.Size(1009, 540);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.chbTodo);

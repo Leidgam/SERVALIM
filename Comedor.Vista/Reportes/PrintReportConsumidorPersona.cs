@@ -41,7 +41,7 @@ namespace Comedor.Vista.Reportes
             rvReporte.LocalReport.DataSources.Clear();
             llenarDatos();
             //String exeFolder = Path.GetDirectoryName(Application.ExecutablePath);
-            String imgPath =  @"\\\\CONTROLALIMENTA\\Fotos\" + cons.Persona.IdPersona + ".jpg";
+            String imgPath =  @"\\CONTROLALIMENTA\Fotos\" + cons.Persona.IdPersona + ".jpg";
             
             var file = new Uri(imgPath);
             List<ReportParameter> parameters = new List<ReportParameter>();

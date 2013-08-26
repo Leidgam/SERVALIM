@@ -105,6 +105,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnFoto
             // 
@@ -211,7 +212,7 @@
             this.label2.Location = new System.Drawing.Point(190, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 21);
+            this.label2.Size = new System.Drawing.Size(146, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Nombre y Materno:";
             // 

@@ -208,7 +208,7 @@ namespace Comedor.Control
 
             }
 
-
+            
 
             return consumidores;
         }
@@ -527,12 +527,11 @@ namespace Comedor.Control
 
         public void eliminar(String idConsumidor)
         {
+            conexion.open();
             string query2 = "UPDATE CONSUMIDOR SET ESTADO=0 WHERE IdConsumidor='"+idConsumidor+"'";
-
-
             SqlCommand queryCommand2 = new SqlCommand(query2, conexion.get());
-
             queryCommand2.ExecuteNonQuery();
+            conexion.close();
         }
 
         public void ReasignarGrupo(List<consumidor> consumidores, String idGrupo)
@@ -551,11 +550,11 @@ namespace Comedor.Control
         public List<Consumidor_Periodo> ListarGrupoAreaConsumidor(int tipo, Usuario usuario)
         {
             conexion.open();
-            
+  
             String whereUsuario = "";
             if (usuario.validarPrivilegio("PRI0000034"))
             {
-             
+      
             }
             else
             {

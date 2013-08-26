@@ -432,14 +432,14 @@ namespace Comedor.Vista.Consumidores
                 {
                     consumidor.IdUsuarioMod = this.usuario.IdUsuario;
                     _mConsumidor.Editar(consumidor);
-                    if (System.IO.File.Exists(@"\\192.168.102.18\Fotos\Fotos\" + persona.IdPersona + ".jpg"))
+                    if (System.IO.File.Exists(@"\\CONTROLALIMENTA\Fotos\Fotos\" + persona.IdPersona + ".jpg"))
                     {
                         // Use a try block to catch IOExceptions, to
                         // handle the case of the file already being
                         // opened by another process.
                         try
                         {
-                            System.IO.File.Delete(@"\\192.168.102.18\Fotos\" + persona.IdPersona + ".jpg");
+                            System.IO.File.Delete(@"\\CONTROLALIMENTA\Fotos\" + persona.IdPersona + ".jpg");
                         }
                         catch (System.IO.IOException e)
                         {
@@ -488,14 +488,14 @@ namespace Comedor.Vista.Consumidores
                 {
                     _mntUsuario.IdUsuarioMod = this.usuario.IdUsuario;
                     _mUsuario.Editar(_mntUsuario);
-                    if (System.IO.File.Exists(@"\\192.168.102.18\Fotos\" + persona.IdPersona + ".jpg"))
+                    if (System.IO.File.Exists(@"\\CONTROLALIMENTA\Fotos\" + persona.IdPersona + ".jpg"))
                     {
                         // Use a try block to catch IOExceptions, to
                         // handle the case of the file already being
                         // opened by another process.
                         try
                         {
-                            System.IO.File.Delete(@"\\192.168.102.18\Fotos\" + persona.IdPersona + ".jpg");
+                            System.IO.File.Delete(@"\\CONTROLALIMENTA\Fotos\" + persona.IdPersona + ".jpg");
                         }
                         catch (System.IO.IOException e)
                         {
@@ -579,7 +579,7 @@ namespace Comedor.Vista.Consumidores
             try
             {
                 Image foto = ResizeImage(this.foto, 420, 500);
-                foto.Save(@"\\192.168.102.18\Fotos\" + nombre + ".jpg", ImageFormat.Jpeg);
+                foto.Save(@"\\CONTROLALIMENTA\Fotos\" + nombre + ".jpg", ImageFormat.Jpeg);
             }
             catch (Exception ex)
             {
@@ -616,7 +616,7 @@ namespace Comedor.Vista.Consumidores
             try
             {
 
-                using (FileStream stream = new FileStream(@"\\192.168.102.18\Fotos\" + persona.IdPersona + ".jpg", FileMode.Open, FileAccess.Read))
+                using (FileStream stream = new FileStream(@"\\CONTROLALIMENTA\Fotos\" + persona.IdPersona + ".jpg", FileMode.Open, FileAccess.Read))
                 {
                     foto = Image.FromStream(stream);
                 }
@@ -699,7 +699,7 @@ namespace Comedor.Vista.Consumidores
             try
             {
 
-                using (FileStream stream = new FileStream(@"\\192.168.102.18\Fotos\" + persona.IdPersona + ".jpg", FileMode.Open, FileAccess.Read))
+                using (FileStream stream = new FileStream(@"\\CONTROLALIMENTA\Fotos\" + persona.IdPersona + ".jpg", FileMode.Open, FileAccess.Read))
                 {
                     foto = Image.FromStream(stream);
                 }

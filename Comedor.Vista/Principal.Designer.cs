@@ -80,7 +80,7 @@
             // subSalir
             // 
             this.subSalir.Name = "subSalir";
-            this.subSalir.Size = new System.Drawing.Size(152, 26);
+            this.subSalir.Size = new System.Drawing.Size(111, 26);
             this.subSalir.Text = "Salir";
             this.subSalir.Click += new System.EventHandler(this.subSalir_Click);
             // 
@@ -252,7 +252,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
+            this.Text = "SERVALIM";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.Load += new System.EventHandler(this.Principal_Load);

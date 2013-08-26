@@ -206,6 +206,7 @@ namespace Comedor.Vista
         private void subSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        
         }
 
 
